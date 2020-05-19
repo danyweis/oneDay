@@ -1,11 +1,11 @@
-# oneDay
-## ***Code*** everyday, ***learn*** everyday!
-In this reposetory I will create a Project a day.
+# #oneDay
+> *Code* everyday, *learn* everyday!
+> In this repository I challenge myself to create one project a day until I land a job.
 
 ### #1 Momentum clone
 
 #### Description:
-In this project I recreat a basic Momentum clone.
+In this project I recreated a basic Momentum clone.
 
 ##### What I used:
 - HTML
