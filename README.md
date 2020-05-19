@@ -1,17 +1,17 @@
 # oneDay
-In this reposetory I will create a Project a day .
+In this reposetory I will create a Project a day.
 
 ### #1 Momentum clone
 
 #### Description:
-In this project i recreat a basic Momentum clone.
+In this project I recreat a basic Momentum clone.
 
 ##### What I used:
 - HTML
 - CSS
 - Vanilla JavaScript
 
-##### What did i learn:
+##### What did I learn:
 - I get more deep in to work with the Date Object
 - I learned how to use local storage
 
@@ -27,7 +27,7 @@ Started & Finished: 19/05/2020
 -
 -
 
-##### What did i learn:
+##### What did I learn:
 -
 -
 
@@ -43,7 +43,7 @@ Started & Finished: Date
 -
 -
 
-##### What did i learn:
+##### What did I learn:
 -
 -
 
