@@ -1,4 +1,5 @@
 # oneDay
+## ***Code*** everyday, ***learn*** everyday!
 In this reposetory I will create a Project a day.
 
 ### #1 Momentum clone
