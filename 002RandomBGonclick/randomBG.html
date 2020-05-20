@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/2randomBG.ico" type="image/x-icon" />
+        <link rel="icon" href="/2randomBG.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="randomBG.css" />
+        <title>Random BG on click</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1
+                unselectable="on"
+                onselectstart="return false;"
+                onmousedown="return false;"
+            >
+                Click to change the Background color
+            </h1>
+            <h2
+                class="colorRGB"
+                unselectable="on"
+                onselectstart="return false;"
+                onmousedown="return false;"
+            >
+                Background: rgb(
+                <span id="colorValue1"></span>, <span id="colorValue2"></span>,
+                <span id="colorValue3"></span> )
+            </h2>
+            <h2
+                class="colorRGB"
+                unselectable="on"
+                onselectstart="return false;"
+                onmousedown="return false;"
+            >
+                Font: rgb(
+                <span id="fontValue1"></span>, <span id="fontValue2"></span>,
+                <span id="fontValue3"></span> )
+            </h2>
+        </div>
+        <script src="randomBG.js"></script>
+    </body>
+</html>

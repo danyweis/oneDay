@@ -31,25 +31,29 @@ Started & Finished: 19/05/2020
 
 ---
 
-### #2 Name
+### #2 Random background color on click
+
+![Random background color screenshot](002RandomBGonclick/2randomBG.png)
 
 #### Description:
+This is a small project where the color of the background changes randomly on every click
 
 ##### What I used:
--
--
+- HTML
+- Vanilla JavaScript
 
 ##### What did I learn:
--
--
+- How to make text on a website unselectable
 
-Started & Finished: Date
+Started & Finished: 20/05/2020
 
 ---
 
 ### #3 Name
 
 #### Description:
+
+ => image ![]()
 
 ##### What I used:
 -
