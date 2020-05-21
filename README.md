@@ -54,7 +54,27 @@ Started & Finished: 20/05/2020
 
 ---
 
-### #3 Name
+### #3 Color converter
+
+#### Description:
+This is a RGB to HEX and HEX to RGB converter
+
+ ![RGB TO HEX converter](003rgb2hex/3rgb2hex.png)
+
+##### What I used:
+- HTML
+- CSS
+- Vanilla JavaScript
+
+##### What did I learn:
+-I learned a lot about colors and that I still need a lot to learn about colors
+-Hot to take the users input and work with it
+
+Started & Finished: 21/05/2020
+
+---
+
+### #4 Name
 
 #### Description:
 

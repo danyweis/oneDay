@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="3rgb2hex.ico" type="image/x-icon" />
+        <link rel="icon" href="3rgb2hex.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="3rgb2hex.css" />
+        <title>RGB 2 HEX</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="result">
+                <h1>Color converter</h1>
+                <div .whiteBlackBlock>
+                    <div class="whiteBlock">
+                        <div
+                            id="resultValueWhite1"
+                            class="resultValueWB resultValueW"
+                        >
+                            Color #AFEEEE on white Background
+                        </div>
+
+                        <div
+                            id="resultValueWhite2"
+                            class="resultValueWB resultValueW"
+                        >
+                            Color #AFEEEE on white Background
+                        </div>
+
+                        <div
+                            id="resultValueWhite3"
+                            class="resultValueWB resultValueW"
+                        >
+                            Color #AFEEEE on white Background
+                        </div>
+                    </div>
+
+                    <div class="blackBlock">
+                        <div
+                            id="resultValueBlack1"
+                            class="resultValueWB resultValueB"
+                        >
+                            Color #AFEEEE on black Background
+                        </div>
+
+                        <div
+                            id="resultValueBlack2"
+                            class="resultValueWB resultValueB"
+                        >
+                            Color #AFEEEE on black Background
+                        </div>
+
+                        <div
+                            id="resultValueBlack3"
+                            class="resultValueWB resultValueB"
+                        >
+                            Color #AFEEEE on black Background
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div id="convert">
+                <h3 class="givenValue first">
+                    What color you looking for:
+                    <span class="only"> only rgb and hex will pass</span>
+                    <div id="searchedValue" contenteditable="true"></div>
+                </h3>
+                <h3 class="givenValue">
+                    RGB Decimal:
+                    <div id="colorValue1">
+                        rgb(
+                        <span id="rgbValue1">175</span>,
+                        <span id="rgbValue2">228</span>,
+                        <span id="rgbValue3">86</span>
+                        )
+                    </div>
+                </h3>
+
+                <h3 class="givenValue">
+                    HEX
+                    <div id="colorValue3">
+                        <span id="hexValue">AFEEEE</span>
+                    </div>
+                </h3>
+                <!-- For Later -->
+                <!-- <h3 class="givenValue">
+                    BINARY
+                    <div id="colorValue4">
+                        <span id="binValue1">10101010</span>,
+                        <span id="binValue2">11001101</span>,
+                        <span id="binValue3">00110101</span>
+                    </div>
+                </h3> -->
+            </div>
+        </div>
+        <script src="3rgb2hex.js"></script>
+    </body>
+</html>
