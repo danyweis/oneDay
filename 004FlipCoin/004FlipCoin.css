@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #cfcfcf;
+    font-family: "Titillium Web", sans-serif;
+}
+
+/* coin section */
+.coinSection {
+    height: 100vh;
+    background-color: #00ffff50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.coin {
+    height: 300px;
+    width: 300px;
+}
+#coin {
+    background-image: url("coin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.randomBTN {
+    background: #eee;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.randomBTN:hover {
+    transform: scale(1.1);
+}
+.toggled {
+    background: #111;
+    color: #eee;
+}
