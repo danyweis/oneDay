@@ -16,7 +16,7 @@
 
 ---
 
-### #1 Momentum clone
+### #1 [Momentum clone](https://danyweis.com/Project/smallProjects/001momentum.html)
 
 ![Momentum screenshot](001MomentumClone/1momentum.png)
 
@@ -34,9 +34,11 @@ In this project I recreated a basic Momentum clone.
 
 Started & Finished: 19/05/2020
 
+
+
 ---
 
-### #2 Random background color on click
+### #2 [Random background color on click](https://danyweis.com/Project/smallProjects/002RandomBGonclick.html)
 
 ![Random background color screenshot](002RandomBGonclick/2randomBG.png)
 
@@ -52,9 +54,10 @@ This is a small project where the color of the background changes randomly on ev
 
 Started & Finished: 20/05/2020
 
+
 ---
 
-### #3 Color converter
+### #3 [Color converter](https://danyweis.com/Project/smallProjects/003rgb2hex.html)
 
 #### Description:
 This is a RGB to HEX and HEX to RGB converter
@@ -74,7 +77,7 @@ Started & Finished: 21/05/2020
 
 ---
 
-### #4 Flip a Coin
+### #4 [Flip a Coin](https://danyweis.com/Project/smallProjects/004FlipCoin.html)
 
 #### Description:
 Just a simple coin flip for that I have time to focus on learning today
