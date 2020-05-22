@@ -79,7 +79,7 @@ Started & Finished: 21/05/2020
 #### Description:
 Just a simple coin flip for that I have time to focus on learning today
 
- => image ![Flip a Coin](004FlipCoin/004FlipCoin.png)
+ ![Flip a Coin](004FlipCoin/004FlipCoin.png)
 
 ##### What I used:
 - Math.random()
@@ -93,7 +93,7 @@ Started & Finished: 22/05/2020
 
 ---
 
-### #4 Name
+### #Number Name
 
 #### Description:
 
