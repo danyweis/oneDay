@@ -16,6 +16,10 @@
 
 ---
 
+### [All the Projects](https://danyweis.com/Project/smallProjects/project.html)
+
+---
+
 ### #1 [Momentum clone](https://danyweis.com/Project/smallProjects/001momentum.html)
 
 ![Momentum screenshot](001MomentumClone/1momentum.png)
@@ -34,11 +38,9 @@ In this project I recreated a basic Momentum clone.
 
 Started & Finished: 19/05/2020
 
-
-
 ---
 
-### #2 [Random background color on click](https://danyweis.com/Project/smallProjects/002RandomBGonclick.html)
+### #2 [Random background color on click](https://danyweis.com/Project/smallProjects/002randomBGonclick.html)
 
 ![Random background color screenshot](002RandomBGonclick/2randomBG.png)
 
@@ -53,7 +55,6 @@ This is a small project where the color of the background changes randomly on ev
 - How to make text on a website unselectable
 
 Started & Finished: 20/05/2020
-
 
 ---
 
