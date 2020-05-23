@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="shortcut icon" href="005age.ico" type="image/x-icon" />
+        <link rel="icon" href="005age.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="005age.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Whats your age?</title>
+    </head>
+    <body>
+        <h1 class="label">What's you date of birth:</h1>
+
+        <hr />
+        <br />
+        <div class="safariBox">
+            M:
+            <input
+                name="dateSafariM"
+                class="safariDate"
+                id="dateSafariM"
+                type="number"
+                placeholder="mm"
+                min="01"
+                max="12"
+                value="1"
+            />
+            D:
+            <input
+                name="dateSafariD"
+                class="safariDate"
+                id="dateSafariD"
+                type="number"
+                min="01"
+                max="31"
+                placeholder="dd"
+                value="1"
+            />
+            Y:<input
+                name="dateSafariY"
+                class="safariDate"
+                id="dateSafariY"
+                type="number"
+                min="1900"
+                max="2019"
+                placeholder="yyyy"
+                value="2000"
+            />
+        </div>
+        <input type="date" id="birthday" name="birthday" value="2000-01-01" />
+        <div id="submit">submit</div>
+        <h2 id="showAge"></h2>
+        <script src="https://kit.fontawesome.com/35473b1517.js"></script>
+        <script src="005age.js"></script>
+    </body>
+</html>

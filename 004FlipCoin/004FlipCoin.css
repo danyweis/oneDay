@@ -18,15 +18,15 @@ body {
     align-items: center;
 }
 
-.coin {
+/* .coin {
     height: 300px;
     width: 300px;
-}
-#coin {
+} */
+/* #coin {
     background-image: url("coin.png");
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */
 
 .randomBTN {
     background: #eee;

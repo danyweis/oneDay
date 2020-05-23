@@ -4,10 +4,8 @@ let coinBTN = document.getElementById("randomCoin");
 function flip() {
     coinBTN.classList.toggle("toggled");
     let coin = Math.floor(Math.random() * 2);
-    let coinImg = document.getElementById("coin");
-    coin === 0
-        ? (coinImg.style.backgroundImage = 'url("heads.png")')
-        : (coinImg.style.backgroundImage = 'url("tails.png")');
+    let coinImg = document.querySelector("#coin > img");
+    coin === 0 ? (coinImg.src = "heads.png") : (coinImg.src = "tails.png");
 }
 function checkKey(e) {
     if (
