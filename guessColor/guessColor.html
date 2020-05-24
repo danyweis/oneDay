@@ -6,9 +6,10 @@
         <link rel="shortcut icon" href="guessColor.ico" type="image/x-icon" />
         <link rel="icon" href="guessColor.ico" type="image/x-icon" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap"
             rel="stylesheet"
         />
+
         <link rel="stylesheet" href="guessColor.css" />
         <title>Guess the color</title>
     </head>
@@ -574,6 +575,130 @@
                 </div>
             </footer>
             <!-- FOOTER END -->
+
+            <!-- HELP BOX AFTER CLICKING THE QUESTION MARK -->
+
+            <div id="helpBox">
+                <div class="helpBoxContainer">
+                    <div class="boxX">X</div>
+                    <div class="textBox rulesBox">
+                        <h2>Rules</h2>
+                        <p>
+                            Guess which colors are hidden at the top! Each round
+                            you pick 4 colors from the bottom – then the orange
+                            and green pegs will hint at how good your guess is.
+                        </p>
+                    </div>
+                    <!-- ORANGE DOT -->
+                    <div class="textBox textBox1">
+                        <div class="lookBox">
+                            <div
+                                id="correctColorBlockHelp"
+                                class="correctColor"
+                            >
+                                <div
+                                    id="row1color1Help"
+                                    class="correctColorCC correctColorHole rowColor1"
+                                ></div>
+                                <div
+                                    id="row1color2Help"
+                                    class="correctColorHole rowColor2"
+                                ></div>
+                                <div
+                                    id="row1color3Help"
+                                    class="correctColorHole rowColor3"
+                                ></div>
+                                <div
+                                    id="row1color4Help"
+                                    class="correctColorHole rowColor4"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>Correct color, but at wrong position</p>
+                        </div>
+                    </div>
+                    <!-- GREEN DOT -->
+                    <div class="textBox textBox2">
+                        <div class="lookBox">
+                            <div
+                                id="correctColorBlockHelp"
+                                class="correctColor"
+                            >
+                                <div
+                                    id="row1color1Help"
+                                    class="correctColorCCP correctColorHole rowColor1"
+                                ></div>
+                                <div
+                                    id="row1color2Help"
+                                    class="correctColorHole rowColor2"
+                                ></div>
+                                <div
+                                    id="row1color3Help"
+                                    class="correctColorHole rowColor3"
+                                ></div>
+                                <div
+                                    id="row1color4Help"
+                                    class="correctColorHole rowColor4"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                Correct color, correct position
+                            </p>
+                        </div>
+                    </div>
+                    <!-- VALIDATION  -->
+                    <div class="textBox textBox3">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="00OK.png" alt="" />
+                            <img class="btnImgBack" src="00OK.png" alt="" />
+                        </div>
+
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                After you did put in the 4 colors you then press
+                                this button to validate you choice.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CORRECTION -->
+                    <div class="textBox textBox4">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="00back.png" alt="" />
+                            <img class="btnImgBack" src="00back.png" alt="" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                With this button you can correct you choice
+                                before validating the row.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END THE GAME -->
+                    <div class="textBox textBox5">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="00end.png" alt="" />
+                            <img class="btnImgBack" src="00end.png" alt="" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>This button will stop the game.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HELP BOX -->
         </div>
         <script src="guessColor.js"></script>
     </body>

@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.5rem;
 }
 
 /* .clearMode {
@@ -21,10 +20,11 @@ body {
 }
 
 .gameBoard {
+    position: relative;
     width: 400px;
     height: 800px;
     margin: 10px auto;
-    font-family: "Anton", sans-serif;
+    font-family: "Raleway", sans-serif;
     border-radius: 15px;
     box-shadow: 5px 20px 10px #00000050, -5px -20px 10px #ffffff50;
 }
@@ -49,6 +49,7 @@ body {
     align-self: center;
     text-transform: uppercase;
     display: none;
+    letter-spacing: 0.5rem;
 }
 
 /* display none when the game is running  */
@@ -239,6 +240,83 @@ body {
     filter: drop-shadow(0px 2px 2px #000000);
     max-height: 35px;
 }
+
+/* HELP BOX */
+
+#helpBox {
+    /* display: none; */
+    overflow: hidden;
+    position: absolute;
+    height: 94%;
+    width: 94%;
+    background-color: #f5f5f5;
+    top: 3%;
+    left: 3%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #00000070, -2px -2px 2px #ffffff70;
+}
+/* x TO CLOSE THE WINDOW */
+.boxX {
+    position: absolute;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    right: 0;
+    box-shadow: 2px 2px 2px #000000, -2px -2px 2px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: -2px -2px 2px #ffffff50, 2px 2px 2px #00000050;
+}
+
+.helpBoxContainer {
+    display: grid;
+    height: 100%;
+    /* grid-template-rows: repeat(8, auto); */
+    line-height: 150%;
+}
+
+/* EACH RULE OX EXPLANATION IS IN ONE TEXT BOX */
+.textBox {
+    min-height: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1px 4fr 50px;
+}
+
+/* LEFT SIDE SHOWS THE PICKS AND BUTTONS */
+.lookBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rulesBox {
+    padding-top: 20px;
+    margin: 0 10px;
+}
+.rulesBox > h2 {
+    grid-column: 1/-1;
+    /* height: 50px; */
+    text-align: center;
+}
+.rulesBox > p {
+    grid-column: 1/-1;
+}
+
+.explainBox {
+    display: flex;
+    align-items: center;
+}
+
+.explainBox > p {
+    margin-left: 10px;
+}
+
+/* TIME BOX */
 
 /* iPhoneSE/5 */
 /* @media(max-height:568) and (max-width:320){
