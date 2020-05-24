@@ -113,7 +113,7 @@ Started & Finished: 22/05/2020
 
 #### Description:
 
-Input will be a birth date and it will tell you how long untill your next Birthday or if it is your birthday
+Input will be a birth date and it will tell you how long until your next Birthday or if it is your birthday
 
 ![Preview of What age?](005age/005age.png)
 
@@ -128,6 +128,26 @@ Input will be a birth date and it will tell you how long untill your next Birthd
 -   how to find out if the browser is Safari and then to show type="number"
 
 Started & Finished: 23/05/2020
+
+---
+
+### #6 [CSS Hero slider]
+
+#### Description:
+
+This is a hero slider build with no JavaScript only CSS
+
+![CSS build hero slider preview](006heroSlider/006heroSlider.png)
+
+##### What I used:
+
+- CSS keyframes
+
+##### What did I learn:
+
+ - how to use CSS keyframes
+
+Started & Finished: 24/05/2020
 
 ---
 
