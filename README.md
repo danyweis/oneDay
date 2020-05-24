@@ -131,7 +131,7 @@ Started & Finished: 23/05/2020
 
 ---
 
-### #6 [CSS Hero slider]
+### #6 [CSS Hero slider](https://danyweis.com/Project/smallProjects/006heroSlider.html)
 
 #### Description:
 
