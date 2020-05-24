@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5rem;
+}
+
+/* .clearMode {
+    background: #f5f5f5;
+    color: #f5f5f5;
+    text-shadow: 0px -2px 2px #ffffff, 0px 2px 2px #00000050;
+} */
+.darkMode {
+    background: #272935;
+    color: #272935;
+    text-shadow: 0px -2px 2px #ffffff50, 0px 2px 2px #00000050;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.gameBoard {
+    width: 400px;
+    height: 800px;
+    margin: 10px auto;
+    font-family: "Anton", sans-serif;
+    border-radius: 15px;
+    box-shadow: 5px 20px 10px #00000050, -5px -20px 10px #ffffff50;
+}
+
+/* HEAD  */
+.head {
+    box-shadow: 0 2px 2px #00000050;
+    height: 15%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+/* display none when we show the colors */
+#guessTheColor {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    text-align: center;
+    height: 100%;
+    align-self: center;
+    text-transform: uppercase;
+    display: none;
+}
+
+/* display none when the game is running  */
+#resultWindow {
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px #ffffff50, 0 -2px 2px #00000050;
+    /* grid for the result colors */
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    /* display: none; */
+}
+/* chosen bullet is 36px else is 30px  */
+.colorBullet {
+    /* background: aqua; */
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* GAME AREA */
+
+.gameArea {
+    height: 70%;
+    /* background: pink; */
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.colorRow {
+    display: grid;
+    grid-template-columns: 1fr 1px 4fr 1px 1fr;
+}
+.correctColor {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+/* LEFT COLUMN WITH CORRECT ANSWERS */
+.correctColorHole {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px #00000075 inset, 0 -4px 4px #ffffff50 inset;
+    /* background-color: pink; */
+}
+
+/* CC => CORRECT COLOR */
+.correctColorCC {
+    height: 10px;
+    width: 10px;
+    background-color: orangered;
+}
+/* CCP => CORRECT COLOR PLACE */
+.correctColorCCP {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+}
+
+.rowColor1 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.rowColor2 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.rowColor3 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.rowColor4 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+
+/* SEPARATION  LEFT RIGHT*/
+.emptyBlockL {
+    grid-column: 2/3;
+    box-shadow: 1px 0px 2px #000000, -1px -0px 2px #ffffff;
+}
+.emptyBlockR {
+    grid-column: 4/5;
+    box-shadow: 1px 0px 2px #000000, -1px -0px 2px #ffffff;
+}
+
+/* MIDDLE SECTION TO CHOSE THE COLOR */
+
+.choiceColor {
+    grid-column: 3/4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.choiceColorHole {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px #00000075 inset, 0 -4px 4px #ffffff50 inset;
+}
+
+/* General size of the bullets in the result window */
+.colorBullet {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
+}
+
+.buttonColor1,
+.colorBullet1 {
+    background-color: rgb(33, 33, 209);
+}
+
+.buttonColor2,
+.colorBullet2 {
+    background-color: rgb(33, 136, 33);
+}
+.buttonColor3,
+.colorBullet3 {
+    background-color: rgb(180, 30, 30);
+}
+.buttonColor4,
+.colorBullet4 {
+    background-color: rgb(238, 238, 33);
+}
+.buttonColor5,
+.colorBullet5 {
+    background-color: rgb(94, 33, 155);
+}
+.buttonColor6,
+.colorBullet6 {
+    background-color: rgb(243, 89, 33);
+}
+
+.footer {
+    box-shadow: 0 -2px 2px #ffffff50;
+    height: 15%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3px;
+}
+.buttonRow1 {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    /* background-color: #8a2be210; */
+}
+.buttonRow2 {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    /* background-color: #ffa50050; */
+}
+.buttons {
+    height: 80%;
+    width: 80%;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px #000000, 0px -2px 2px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnImgFront {
+    filter: drop-shadow(0px -2px 2px #ffffff70);
+    position: absolute;
+    max-height: 35px;
+}
+.btnImgBack {
+    filter: drop-shadow(0px 2px 2px #000000);
+    max-height: 35px;
+}
+
+/* iPhoneSE/5 */
+/* @media(max-height:568) and (max-width:320){
+    
+}
+
+@media(max-height:568) and (max-width:320){
+
+}
+@media(max-height:568) and (max-width:320){
+
+}
+@media(max-height:568) and (max-width:320){
+
+} */
+/* Everything Else  */
+/* @media (min-width: 450px) { */
