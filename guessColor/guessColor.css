@@ -45,7 +45,7 @@ body {
     height: 100%;
     align-self: center;
     text-transform: uppercase;
-    display: none;
+    /* display: none; */
     letter-spacing: 0.5rem;
 }
 
@@ -61,7 +61,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
-    /* display: none; */
+    display: none;
 }
 /* chosen bullet is 36px else is 30px  */
 .colorBullet {
@@ -193,6 +193,43 @@ body {
     background-color: rgb(243, 89, 33);
 }
 
+/* ANIMATION TIME PLAYER NOT DOING SOmETHING */
+.waitForAction {
+    border: 2px solid greenyellow;
+    width: 36px;
+    height: 36px;
+    animation: selection 1s infinite;
+    /* background-color: pink; */
+}
+
+@keyframes selection {
+    0% {
+        width: 32px;
+        height: 32px;
+    }
+    50% {
+        width: 36px;
+        height: 36px;
+    }
+    100% {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ALL THE BUTTONS */
+.btn {
+    cursor: pointer;
+    transition: ease 150ms;
+    outline: none;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
+.btn:active {
+    transform: scale(0.98);
+}
+
 .footer {
     box-shadow: 0 -2px 2px #ffffff50;
     height: 15%;
@@ -243,6 +280,7 @@ body {
 
 #helpBox {
     display: none;
+    z-index: 10;
     overflow: hidden;
     position: absolute;
     height: 94%;
@@ -317,6 +355,7 @@ body {
 /* TIME BOX */
 
 #timeScore {
+    z-index: 10;
     top: 0;
     left: 0;
     position: absolute;
@@ -415,6 +454,7 @@ body {
 
 /* WELCOME AND END DISPLAY */
 #welcome {
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
@@ -468,6 +508,9 @@ body {
     box-shadow: 2px 2px 1px #00000050, -2px -2px 1px #ffffff;
 }
 
+.masterHacker {
+    display: none;
+}
 /* BIGGER SCREEN THEN  PHONES */
 
 @media (min-width: 450px) {
@@ -477,5 +520,16 @@ body {
         margin: 10px auto;
         border-radius: 15px;
         box-shadow: 5px 20px 10px #00000050, -5px -20px 10px #ffffff50;
+    }
+    .masterHacker {
+        display: block;
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 46%;
+        right: -55%;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        /* line-height: 110%; */
     }
 }

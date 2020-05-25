@@ -43,26 +43,26 @@
                     <div id="correctColorBlock1" class="correctColor">
                         <div
                             id="row1color1"
-                            class="correctColorCC correctColorHole rowColor1"
+                            class="correctColorHole rowColor1"
                         ></div>
                         <div
                             id="row1color2"
-                            class="correctColorCCP correctColorHole rowColor2"
+                            class="correctColorHole rowColor2"
                         ></div>
                         <div
                             id="row1color3"
-                            class="correctColorCC correctColorHole rowColor3"
+                            class="correctColorHole rowColor3"
                         ></div>
                         <div
                             id="row1color4"
-                            class="correctColorCCP correctColorHole rowColor4"
+                            class="correctColorHole rowColor4"
                         ></div>
                     </div>
                     <div class="emptyBlockL"></div>
                     <div id="choiceColorBlock1" class="choiceColor">
                         <div
                             id="row1ChoiceColor1"
-                            class="choiceColorHole"
+                            class="choiceColorHole waitForAction"
                         ></div>
                         <div
                             id="row1ChoiceColor2"
@@ -273,19 +273,19 @@
                     <div id="choiceColorBlock6" class="choiceColor">
                         <div
                             id="row6ChoiceColor1"
-                            class="choiceColorHole colorBullet3 colorBullet"
+                            class="choiceColorHole"
                         ></div>
                         <div
                             id="row6ChoiceColor2"
-                            class="choiceColorHole colorBullet5 colorBullet"
+                            class="choiceColorHole"
                         ></div>
                         <div
                             id="row6ChoiceColor3"
-                            class="choiceColorHole colorBullet6 colorBullet"
+                            class="choiceColorHole"
                         ></div>
                         <div
                             id="row6ChoiceColor4"
-                            class="choiceColorHole colorBullet4 colorBullet"
+                            class="choiceColorHole"
                         ></div>
                     </div>
 
@@ -548,27 +548,45 @@
             <!-- GAME AREA END -->
             <footer class="footer">
                 <div class="buttonRow1">
-                    <div class="buttons buttonColor1" id="row1button1 "></div>
-                    <div class="buttons buttonColor2" id="row1button2 "></div>
-                    <div class="buttons buttonColor3" id="row1button3 "></div>
-                    <div class="buttons buttonOK" id="row1button4 ">
+                    <div
+                        class="btn buttons buttonColor1"
+                        id="row1button1 "
+                    ></div>
+                    <div
+                        class="btn buttons buttonColor2"
+                        id="row1button2 "
+                    ></div>
+                    <div
+                        class="btn buttons buttonColor3"
+                        id="row1button3 "
+                    ></div>
+                    <div class="btn buttons buttonOK" id="row1button4 ">
                         <img class="btnImgFront" src="00OK.png" alt="" />
                         <img class="btnImgBack" src="00OK.png" alt="" />
                     </div>
-                    <div class="buttons buttonEnd" id="row1button5 ">
+                    <div class="btn buttons buttonEnd" id="row1button5 ">
                         <img class="btnImgFront" src="00end.png" alt="" />
                         <img class="btnImgBack" src="00end.png" alt="" />
                     </div>
                 </div>
                 <div class="buttonRow2">
-                    <div class="buttons buttonColor4" id="row2button1 "></div>
-                    <div class="buttons buttonColor5" id="row2button2 "></div>
-                    <div class="buttons buttonColor6" id="row2button3 "></div>
-                    <div class="buttons buttonBack" id="row2button4 ">
+                    <div
+                        class="btn buttons buttonColor4"
+                        id="row2button1 "
+                    ></div>
+                    <div
+                        class="btn buttons buttonColor5"
+                        id="row2button2 "
+                    ></div>
+                    <div
+                        class="btn buttons buttonColor6"
+                        id="row2button3 "
+                    ></div>
+                    <div class="btn buttons buttonBack" id="row2button4 ">
                         <img class="btnImgFront" src="00back.svg" alt="" />
                         <img class="btnImgBack" src="00back.svg" alt="" />
                     </div>
-                    <div class="buttons buttonQuestion" id="row2button5 ">
+                    <div class="btn buttons buttonQuestion" id="row2button5 ">
                         <img class="btnImgFront" src="00question.svg" alt="" />
                         <img class="btnImgBack" src="00question.svg" alt="" />
                     </div>
@@ -719,18 +737,18 @@
                     </div>
                     <h4 class="timeHeader currentBestTime">Best Time</h4>
                     <div id="currentBestTimeNumbers" class="timeScoreNumbers">
-                        Easy 00:00
+                        Hard 00:00
                     </div>
                     <div class="playResetBox">
                         <button
                             id="playButton"
-                            class="playResetBtn playResetBtnLeft"
+                            class="btn playResetBtn playResetBtnLeft"
                         >
                             Restart
                         </button>
                         <button
                             id="resetButton"
-                            class="playResetBtn playResetBtnRight"
+                            class="btn playResetBtn playResetBtnRight"
                         >
                             Reset Time
                         </button>
@@ -741,12 +759,12 @@
                             <div class="playResetBox">
                                 <button
                                     id="cancel"
-                                    class="playResetBtn playResetBtnLeft"
+                                    class="btn playResetBtn playResetBtnLeft"
                                 >
                                     Cancel</button
                                 ><button
                                     id="reset"
-                                    class="playResetBtn playResetBtnRight"
+                                    class="btn playResetBtn playResetBtnRight"
                                 >
                                     Reset
                                 </button>
@@ -822,12 +840,13 @@
                 </div>
                 <!-- START BUTTON -->
                 <div class="start">
-                    <button id="startGame" class="playResetBtnFull">
+                    <button id="startGame" class="btn playResetBtnFull">
                         Give it a try!
                     </button>
                 </div>
             </div>
             <!-- END WELCOME PAGE -->
+            <h2 class="masterHacker">masterhacker</h2>
         </div>
         <script src="guessColor.js"></script>
     </body>
