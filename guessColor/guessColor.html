@@ -551,11 +551,11 @@
                     <div class="buttons buttonColor1" id="row1button1 "></div>
                     <div class="buttons buttonColor2" id="row1button2 "></div>
                     <div class="buttons buttonColor3" id="row1button3 "></div>
-                    <div class="buttons buttonEnd" id="row1button4 ">
+                    <div class="buttons buttonOK" id="row1button4 ">
                         <img class="btnImgFront" src="00OK.png" alt="" />
                         <img class="btnImgBack" src="00OK.png" alt="" />
                     </div>
-                    <div class="buttons buttonQuestion" id="row1button5 ">
+                    <div class="buttons buttonEnd" id="row1button5 ">
                         <img class="btnImgFront" src="00end.png" alt="" />
                         <img class="btnImgBack" src="00end.png" alt="" />
                     </div>
@@ -564,13 +564,13 @@
                     <div class="buttons buttonColor4" id="row2button1 "></div>
                     <div class="buttons buttonColor5" id="row2button2 "></div>
                     <div class="buttons buttonColor6" id="row2button3 "></div>
-                    <div class="buttons buttonOK" id="row2button4 ">
-                        <img class="btnImgFront" src="00back.png" alt="" />
-                        <img class="btnImgBack" src="00back.png" alt="" />
+                    <div class="buttons buttonBack" id="row2button4 ">
+                        <img class="btnImgFront" src="00back.svg" alt="" />
+                        <img class="btnImgBack" src="00back.svg" alt="" />
                     </div>
-                    <div class="buttons buttonDelete" id="row2button5 ">
-                        <img class="btnImgFront" src="00question.png" alt="" />
-                        <img class="btnImgBack" src="00question.png" alt="" />
+                    <div class="buttons buttonQuestion" id="row2button5 ">
+                        <img class="btnImgFront" src="00question.svg" alt="" />
+                        <img class="btnImgBack" src="00question.svg" alt="" />
                     </div>
                 </div>
             </footer>
@@ -580,7 +580,7 @@
 
             <div id="helpBox">
                 <div class="helpBoxContainer">
-                    <div class="boxX">X</div>
+                    <div class="boxX" id="xHelpBox">X</div>
                     <div class="textBox rulesBox">
                         <h2>Rules</h2>
                         <p>
@@ -672,8 +672,8 @@
                     <!-- CORRECTION -->
                     <div class="textBox textBox4">
                         <div class="lookBox">
-                            <img class="btnImgFront" src="00back.png" alt="" />
-                            <img class="btnImgBack" src="00back.png" alt="" />
+                            <img class="btnImgFront" src="00back.svg" alt="" />
+                            <img class="btnImgBack" src="00back.svg" alt="" />
                         </div>
                         <div class="emptyBlockL"></div>
 
@@ -699,6 +699,135 @@
                 </div>
             </div>
             <!-- END HELP BOX -->
+            <div id="timeScore">
+                <div class="timeScoreBox">
+                    <div class="boxX" id="xTimeScore">X</div>
+                    <h4 class="timeHeader currentTime">Current Time</h4>
+                    <div
+                        id="currentTimeNumbers"
+                        class="timeScoreNumbers currentTime"
+                    >
+                        Easy 00:00
+                    </div>
+                    <div id="newBestTime">
+                        <img
+                            class="newBestTimeImg"
+                            src="00best.svg"
+                            alt="first place image"
+                        />
+                        <h3>Wow, well done you have a new</h3>
+                    </div>
+                    <h4 class="timeHeader currentBestTime">Best Time</h4>
+                    <div id="currentBestTimeNumbers" class="timeScoreNumbers">
+                        Easy 00:00
+                    </div>
+                    <div class="playResetBox">
+                        <button
+                            id="playButton"
+                            class="playResetBtn playResetBtnLeft"
+                        >
+                            Restart
+                        </button>
+                        <button
+                            id="resetButton"
+                            class="playResetBtn playResetBtnRight"
+                        >
+                            Reset Time
+                        </button>
+                    </div>
+                    <div class="resetConfirmation">
+                        <div class="resetConfirmationBox">
+                            <h5>Do you really want to reset your best time?</h5>
+                            <div class="playResetBox">
+                                <button
+                                    id="cancel"
+                                    class="playResetBtn playResetBtnLeft"
+                                >
+                                    Cancel</button
+                                ><button
+                                    id="reset"
+                                    class="playResetBtn playResetBtnRight"
+                                >
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TIME SCORE -->
+            <!-- WELCOME AND AFTER PRESS ENF BUTTON -->
+            <div id="welcome">
+                <div class="welcomeBox">
+                    <div class="welcomeText textBox">
+                        <h2 class="textBoxText welcomeHeader">
+                            Crack the code
+                        </h2>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <h3 class="textBoxText">Chose your difficulty:</h3>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input
+                                type="radio"
+                                name="difficulty"
+                                id="difficultyEasy"
+                                checked
+                            />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Easy</h5>
+                            <p>
+                                In the easy mode you have 12 guesses before the
+                                game is over!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input
+                                type="radio"
+                                name="difficulty"
+                                id="difficultyMedium"
+                            />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Medium</h5>
+                            <p>
+                                In the medium mode you have 10 guesses before
+                                the game is over!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input
+                                type="radio"
+                                name="difficulty"
+                                id="difficultyHard"
+                            />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Hard</h5>
+                            <p>
+                                In the hard mode you have only 8 guesses before
+                                the game is over!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- START BUTTON -->
+                <div class="start">
+                    <button id="startGame" class="playResetBtnFull">
+                        Give it a try!
+                    </button>
+                </div>
+            </div>
+            <!-- END WELCOME PAGE -->
         </div>
         <script src="guessColor.js"></script>
     </body>

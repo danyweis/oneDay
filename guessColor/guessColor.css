@@ -8,7 +8,7 @@
     background: #f5f5f5;
     color: #f5f5f5;
     text-shadow: 0px -2px 2px #ffffff, 0px 2px 2px #00000050;
-} */
+    } */
 .darkMode {
     background: #272935;
     color: #272935;
@@ -21,12 +21,9 @@ body {
 
 .gameBoard {
     position: relative;
-    width: 400px;
-    height: 800px;
-    margin: 10px auto;
+    width: 100%;
+    height: 100vh;
     font-family: "Raleway", sans-serif;
-    border-radius: 15px;
-    box-shadow: 5px 20px 10px #00000050, -5px -20px 10px #ffffff50;
 }
 
 /* HEAD  */
@@ -225,8 +222,9 @@ body {
     height: 80%;
     width: 80%;
     position: relative;
+    border: hidden;
     border-radius: 15px;
-    box-shadow: 0px 2px 2px #000000, 0px -2px 2px #ffffff;
+    box-shadow: 2px 2px 2px #000000, -2px -2px 2px #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,7 +242,7 @@ body {
 /* HELP BOX */
 
 #helpBox {
-    /* display: none; */
+    display: none;
     overflow: hidden;
     position: absolute;
     height: 94%;
@@ -318,19 +316,166 @@ body {
 
 /* TIME BOX */
 
-/* iPhoneSE/5 */
-/* @media(max-height:568) and (max-width:320){
-    
+#timeScore {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
-@media(max-height:568) and (max-width:320){
-
+.timeScoreBox {
+    position: relative;
+    background-color: #f5f5f5;
+    width: 90%;
+    height: 50%;
+    text-align: center;
+    border-radius: 15px;
+    /* box-shadow: 2px 2px 2px #000000, -2px -2px 2px #ffffff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
-@media(max-height:568) and (max-width:320){
-
+.timeHeader {
+    font-size: 2rem;
 }
-@media(max-height:568) and (max-width:320){
+.timeScoreNumbers {
+    margin: 25px;
+    font-size: 1.5rem;
+}
+.currentTime {
+    /* display: none; */
+}
 
-} */
-/* Everything Else  */
-/* @media (min-width: 450px) { */
+/* IF NEW BEST TIME #newBestTime WILL BE SHOWN AND .currentTime BE HIDDEN */
+#newBestTime {
+    display: none;
+}
+.newBestTimeImg {
+    height: 100px;
+}
+#newBestTime {
+    font-size: 2rem;
+}
+
+.playResetBox {
+    display: flex;
+    height: 15%;
+}
+.playResetBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border: hidden;
+    border-top: 1px solid #00000050;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.playResetBtnLeft {
+    border-right: 1px solid #00000050;
+}
+.playResetBtnRight {
+    border-left: 1px solid #00000050;
+}
+
+/* SHOW AFTER PRESS THE RESET BUTTON */
+.resetConfirmation {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.resetConfirmationBox {
+    height: 100%;
+    /* background-color: #f5f5f5; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.playResetBox {
+    width: 100%;
+}
+.resetConfirmationBox > h5 {
+    height: 60%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* WELCOME AND END DISPLAY */
+#welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: none;
+}
+
+.welcomeBox {
+    height: 70%;
+    display: grid;
+    /* grid-template-rows: repeat(); */
+}
+.welcomeHeader {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.textBoxText {
+    text-align: center;
+    grid-column: 1/-1;
+}
+.explainBoxStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+.playResetBtnFull {
+    font-size: 2.5rem;
+    border-radius: 5px;
+    background: #f5f5f5;
+    border: none;
+    box-shadow: 2px 2px 2px #00000050, -2px -2px 2px #ffffff;
+    padding: 20px;
+}
+.playResetBtnFull:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 4px #00000050, -2px -2px 3px #ffffff;
+}
+.playResetBtnFull:active {
+    transform: scale(0.98);
+    box-shadow: 2px 2px 1px #00000050, -2px -2px 1px #ffffff;
+}
+
+/* BIGGER SCREEN THEN  PHONES */
+
+@media (min-width: 450px) {
+    .gameBoard {
+        width: 400px;
+        height: 800px;
+        margin: 10px auto;
+        border-radius: 15px;
+        box-shadow: 5px 20px 10px #00000050, -5px -20px 10px #ffffff50;
+    }
+}
