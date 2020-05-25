@@ -22,7 +22,7 @@ let backBTN = document.querySelector("#row2button4");
 
 // store all the changes in the HTML to reset
 // everything at the end of the game
-let changesArry = [];
+let changesArray = [];
 // if gameOn is false we don't react on the input of the user
 let gameOn = false;
 
@@ -32,7 +32,8 @@ const userInputStorage = {};
 //WELCOME PAGE
 
 // get out of the welcome page
-let difficulty = null;
+// ==> set difficulty to null to play the game <==
+let difficulty = 8;
 let welcomePage = document.querySelector("#welcome");
 
 function setDifficulty() {
@@ -42,7 +43,13 @@ function setDifficulty() {
     // go over the array and get the selected difficulty
     for (let i = 0; i < difficultyRadio.length; i++) {
         if (difficultyRadio[i].checked) {
-            difficulty = difficultyRadio[i].value;
+            if (difficultyRadio[i].value === "easy") {
+                difficulty = 12;
+            } else if (difficultyRadio[i].value === "medium") {
+                difficulty = 10;
+            } else {
+                difficulty = 8;
+            }
             welcomePage.classList.toggle("displayNone");
             //Start the gme in asking rof first random colors
             getRandomColor();
@@ -80,15 +87,13 @@ function getRandomColor() {
         let placeholderArray = [];
         // get the random color
         let getRandomNumber = Math.ceil(Math.random() * 6);
-        document
-            .querySelector(`#resultColor${count}`)
-            .classList.toggle(`colorBullet${getRandomNumber}`);
+        document.querySelector(`#resultColor${count}`).classList.toggle(`colorBullet${getRandomNumber}`);
 
         placeholderArray.push(`#resultColor${count}`);
         placeholderArray.push(`colorBullet${getRandomNumber}`);
 
         // put in the changesArray what was changed in the html
-        changesArry.push(placeholderArray);
+        changesArray.push(placeholderArray);
 
         // randomColorArray is used later to compare with the user input
         randomColorArray.push(getRandomNumber);
@@ -96,10 +101,58 @@ function getRandomColor() {
     gameOn = true;
     userInputStorage.randomColor = randomColorArray;
 }
-// round will be incremented when one row is full and validated
+
+// count will be incremented when one row is full and validated
+let countRows = 1;
+
+// round will count the user inputs
 let round = 1;
-const userPlaceholder = [];
+
 function getUserInput(pushedColor) {
+    const userPlaceholder = [];
+    if (countRows <= difficulty) {
+        if (pushedColor >= 1 && pushedColor <= 6 && round <= 4) {
+            // userPlaceholder.push(pushedColor);
+
+            document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle(`colorBullet`);
+            document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle(`colorBullet${pushedColor}`);
+
+            // push the id and the classList to reset them later
+            userPlaceholder.push(`#row${countRows}ChoiceColor${round}`);
+            userPlaceholder.push(`colorBullet${pushedColor}`);
+
+            //push placeholder in changesArray
+            changesArray.push(userPlaceholder);
+            document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+            round++;
+            // when the last color is set the wait for action does not continue
+            if (round < 5) {
+                document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+            }
+        } else if (pushedColor === "back" && round !== 1 && round <= 5) {
+            // pop out the last array from the
+
+            document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle(`colorBullet`);
+            document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle(`${changesArray[changesArray.length - 1][1]}`);
+            if (round !== 5) {
+                document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+            }
+
+            document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle("waitForAction");
+            round--;
+            changesArray.pop();
+        } else if (pushedColor === "valid" && round === 5) {
+            // DO THE MAGIC LOOK IF THE COLORS ARE CORRECT
+            round = 1;
+            countRows++;
+            document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+
+            console.log("lets do this");
+        }
+    } else {
+        // GAME OVER
+    }
+    // to see what is pushed
     console.log(pushedColor);
 }
 

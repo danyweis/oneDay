@@ -151,6 +151,18 @@ Started & Finished: 24/05/2020
 
 ---
 
+### Update
+
+#### Description:
+Today no finished project to show I do currently work on a bigger project since yesterday  
+the 25/05/2020, It is the guess the color game everything in HTML CSS AND Vanilla JavaScript  
+I'm currently working in the JavaScript to look if the players choice is the same as the hidden colors
+
+![Guess the color](guessColor/welcome.png)![Guess the color](guessColor/playingfield.png)
+
+
+---
+
 ### #Number Name
 
 #### Description:
