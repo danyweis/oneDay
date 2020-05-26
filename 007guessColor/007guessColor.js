@@ -13,6 +13,11 @@ let color6BTN = document.querySelector("#row2button3");
 let validBTN = document.querySelector("#row1button4");
 let backBTN = document.querySelector("#row2button4");
 
+let gameOver = document.querySelector(".gameOver");
+let currentTime = document.querySelectorAll(".currentTime");
+let resultWindow = document.querySelector(".resultWindow");
+let guessTheColor = document.querySelector(".guessTheColor");
+
 // store all the changes in the HTML to reset everything at the end of the game
 let changesArray = [];
 
@@ -25,7 +30,7 @@ const userInputStorage = {}; // Look how to empty the
 //WELCOME PAGE
 
 // get out of the welcome page
-let difficulty = 8; // <== set difficulty to null to play the game <== (AWAY)
+let difficulty = 2; // <== set difficulty to 8 to test the game <== (AWAY)
 let welcomePage = document.querySelector("#welcome");
 
 function setDifficulty() {
@@ -45,9 +50,11 @@ function setDifficulty() {
     }
 }
 
-function openWelcomePage() {
+function backToWelcomePage() {
+    validBTN.classList.remove("waitForAction");
     // reset all the styling
     resetAllTheCSS();
+    welcomePage.classList.toggle("displayNone");
     // reset array, object and difficulty
     resetAllTheData();
 }
@@ -57,6 +64,60 @@ function openWelcomePage() {
 // open and close the rules / help box page
 function openCloseRules() {
     helpBox.classList.toggle("displayNone");
+}
+
+function resetTimeScorePageValues() {
+    resetAllTheCSS();
+    resetAllTheData();
+    round = 1;
+    countRows = 1;
+    getRandomColor();
+    gameOn = true;
+}
+
+function resetAfterTimeScorePage() {
+    console.log("hello");
+    // guessTheColor.classList.remove("displayNone");
+    // resultWindow.classList.add("displayNone");
+    timeScorePage.classList.toggle("displayNone");
+    resetTimeScorePageValues();
+}
+
+//TIME SCORE PAGE
+let timeScorePage = document.querySelector(".timeScore");
+
+function timeScore() {
+    guessTheColor.classList.toggle("displayNone");
+    resultWindow.classList.toggle("displayNone");
+    timeScorePage.classList.toggle("displayNone");
+    let restartTimeScorePage = document.querySelector("#playButton");
+    restartTimeScorePage.addEventListener("click", resetAfterTimeScorePage);
+}
+
+function resetGameOverPage() {
+    // adds displayNone
+    guessTheColor.classList.toggle("displayNone");
+    resultWindow.classList.toggle("displayNone");
+    gameOver.classList.toggle("displayNone");
+    for (let i = 0; i < currentTime.length; i++) {
+        currentTime[i].classList.toggle("displayNone");
+    }
+}
+
+function gameOverPage() {
+    // removes displayNone class
+    guessTheColor.classList.toggle("displayNone");
+    resultWindow.classList.toggle("displayNone");
+    gameOver.classList.toggle("displayNone");
+    for (let i = 0; i < currentTime.length; i++) {
+        currentTime[i].classList.toggle("displayNone");
+    }
+
+    timeScorePage.classList.remove("displayNone");
+    let restartTimeScorePage = document.querySelector("#playButton");
+    restartTimeScorePage.addEventListener("click", resetAfterTimeScorePage);
+    restartTimeScorePage.addEventListener("click", resetGameOverPage);
+    // currentTime.map((a) => a.classList.toggle("displayNone"));
 }
 
 // START THE GAME GET THE RANDOM COLORS
@@ -88,8 +149,6 @@ function getRandomColor() {
     }
     gameOn = true;
     userInputStorage.randomColor = randomColorArray;
-
-    // console.log(randomColorArray);
 }
 
 // count will be incremented when one row is full and validated
@@ -99,6 +158,7 @@ let countRows = 1;
 let round = 1;
 
 let userInputNumbers = [];
+
 function getUserInput(pushedColor) {
     const userPlaceholder = [];
     if (countRows <= difficulty) {
@@ -112,13 +172,8 @@ function getUserInput(pushedColor) {
 
             //push placeholder in changesArray
             changesArray.push(userPlaceholder);
-            document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-            round++;
 
-            // when the last color is set the wait for action does not continue
-            if (round < 5) {
-                document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-            }
+            round++;
 
             // push the pressed key to userInputNumbers
             userInputNumbers.push(pushedColor);
@@ -127,12 +182,6 @@ function getUserInput(pushedColor) {
 
             document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle(`${changesArray[changesArray.length - 1][1]}`);
 
-            // while we not at the end of the row
-            if (round !== 5) {
-                document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-            }
-
-            document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle("waitForAction");
             round--;
 
             // take last elements out of the arrays
@@ -152,14 +201,15 @@ function getUserInput(pushedColor) {
             checkCorrectColors();
 
             countRows++;
-            if (countRows <= difficulty) {
-                document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-            }
+            // console.log(countRows);
         }
-    } else {
-        // GAME OVER
-        console.log("Game over");
+        if (round == 5) {
+            validBTN.classList.add("waitForAction");
+        } else {
+            validBTN.classList.remove("waitForAction");
+        }
     }
+
     // to see what is pushed
     // console.log(pushedColor);
 }
@@ -168,41 +218,95 @@ function getUserInput(pushedColor) {
 function checkIfWin() {
     for (let n = 0; n < userInputStorage["randomColor"].length; n++) {
         if (userInputStorage["randomColor"][n] !== userInputStorage[countRows][n]) {
-            console.log("No not this time");
+            console.log(countRows + " <= rows " + difficulty + " <= difficulty");
+
+            if (countRows == difficulty) {
+                console.log(currentTime);
+                // currentTime.classList.toggle("displayNone");
+                gameOverPage();
+                // console.log("Game over");
+                return;
+            }
             return;
+        } else if (n === userInputStorage["randomColor"].length - 1) {
+            timeScore();
+            console.log("You win the game");
+            return true;
         } else {
-            console.log("do something you did win");
+            // do nothing
+        }
+    }
+}
+// check to put the dots on the left
+function checkCorrectColors() {
+    let randomArray = userInputStorage["randomColor"].slice();
+    let userArray = userInputStorage[countRows].slice();
+    let count = 1;
+
+    count = lookForColorCCP(count, randomArray, userArray);
+    if (randomArray.length > 0) {
+        lookForColorCC(count, randomArray, userArray);
+    }
+}
+
+// we check if there are the same colors same place
+function lookForColorCCP(count, randomArray, userArray) {
+    for (let n = 0; n < randomArray.length; ) {
+        if (userArray[n] === randomArray[n]) {
+            randomArray.splice(n, 1);
+            userArray.splice(n, 1);
+            correctColorAndPlace(count);
+            count++;
+        } else {
+            n++;
+        }
+    }
+    return count;
+}
+
+// we look if the rest of the colors have some the same colors
+function lookForColorCC(count, randomArray, userArray) {
+    // for debugging
+    // console.log(`GO IN LOOP user => ${userArray} random => ${randomArray}`);
+    for (let n = 0; n < randomArray.length; ) {
+        if (userArray.indexOf(randomArray[n]) !== -1) {
+            let mustGo = userArray.indexOf(randomArray[n]);
+            randomArray.splice(n, 1);
+            userArray.splice(mustGo, 1);
+            correctColorNotPlace(count);
+            count++;
+        } else {
+            n++;
         }
     }
 }
 
-function checkCorrectColors() {
-    let randomArray = userInputStorage["randomColor"].slice();
-    let userArray = userInputStorage[countRows].slice();
-    for (let n = randomArray.length - 1; n >= 0; n--) {}
+// we change the style by adding classes to the HTML of the matching colors not same place
+function correctColorNotPlace(count) {
+    let placeholderArray = [];
+    document.querySelector(`#row${countRows}color${count}`).classList.toggle(`correctColorCC`);
+    placeholderArray.push(`#row${countRows}color${count}`);
+    placeholderArray.push(`correctColorCC`);
+    changesArray.push(placeholderArray);
+}
+// we change the style by adding classes to the HTML of the matching colors at the same place
+function correctColorAndPlace(count) {
+    let placeholderArray = [];
+    document.querySelector(`#row${countRows}color${count}`).classList.toggle(`correctColorCCP`);
+    placeholderArray.push(`#row${countRows}color${count}`);
+    placeholderArray.push(`correctColorCCP`);
+    changesArray.push(placeholderArray);
 }
 
 // reset all the HTML CSS when go to welcome page or win or lose the game
-
 function resetAllTheCSS() {
     for (let n = 0; n < changesArray.length; n++) {
         document.querySelector(`${changesArray[n][0]}`).classList.toggle(`${changesArray[n][1]}`);
     }
-    if (round < 5 && countRows < difficulty) {
-        document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-    }
-    //     if (countRows ==  difficulty) {
-    //         document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-
-    // }
     // we reset the object before resetting countRows
     resetTheObject(countRows);
-
     countRows = 1;
     round = 1;
-    // put the wait for action back to the first hole
-    document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-    welcomePage.classList.toggle("displayNone");
 }
 
 // reset the object to become empty
@@ -217,11 +321,10 @@ function resetTheObject(countRows) {
 function resetAllTheData() {
     userInputNumbers = [];
     changesArray = [];
-    difficulty = null;
+    // difficulty = null;
 }
 
 // Actions for the event listeners
-
 function color1Pushed() {
     gameOn ? getUserInput(1) : "";
 }
@@ -249,8 +352,9 @@ function validPushed() {
 
 //get times from local storage
 
-//Event Listeners
+// TODO: ADD LOCAL STORAGE TO SAVE THE BEST TIMES AND and save them
 
+//Event Listeners
 color1BTN.addEventListener("click", color1Pushed);
 color2BTN.addEventListener("click", color2Pushed);
 color3BTN.addEventListener("click", color3Pushed);
@@ -259,7 +363,84 @@ color5BTN.addEventListener("click", color5Pushed);
 color6BTN.addEventListener("click", color6Pushed);
 backBTN.addEventListener("click", backPushed);
 validBTN.addEventListener("click", validPushed);
-endBTN.addEventListener("click", openWelcomePage);
+endBTN.addEventListener("click", backToWelcomePage);
 questionBTN.addEventListener("click", openCloseRules);
 xHelpBox.addEventListener("click", openCloseRules);
 startButton.addEventListener("click", setDifficulty);
+
+//DONT KNOW IF GONNA USE AGAIN
+// function getUserInput(pushedColor) {
+//     console.log(countRows);
+//     const userPlaceholder = [];
+//     if (countRows <= difficulty) {
+//         if (pushedColor >= 1 && pushedColor <= 6 && round <= 4) {
+//             // userPlaceholder.push(pushedColor);
+//             document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle(`colorBullet${pushedColor}`);
+
+//             // push the id and the classList to reset them later
+//             userPlaceholder.push(`#row${countRows}ChoiceColor${round}`);
+//             userPlaceholder.push(`colorBullet${pushedColor}`);
+
+//             //push placeholder in changesArray
+//             changesArray.push(userPlaceholder);
+//             // document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+//             round++;
+
+//             // when the last color is set the wait for action does not continue
+//             // if (round < 5) {
+//             //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+//             // }
+
+//             // push the pressed key to userInputNumbers
+//             userInputNumbers.push(pushedColor);
+//         } else if (pushedColor === "back" && round !== 1 && round <= 5) {
+//             // pop out the last array from the
+
+//             document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle(`${changesArray[changesArray.length - 1][1]}`);
+
+//             // while we not at the end of the row
+//             // if (round !== 5) {
+//             //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+//             // }
+
+//             // document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle("waitForAction");
+//             round--;
+
+//             // take last elements out of the arrays
+//             changesArray.pop();
+//             userInputNumbers.pop();
+//         } else if (pushedColor === "valid" && round === 5) {
+//             // DO THE MAGIC LOOK IF THE COLORS ARE CORRECT
+//             // get the data to the object
+//             userInputStorage[countRows] = userInputNumbers;
+//             userInputNumbers = [];
+//             round = 1;
+
+//             //This will look if we did win
+//             let winORnot = checkIfWin();
+//             if (!winORnot) {
+//                 // If we did not win we have to look if the colors are correct
+//                 checkCorrectColors();
+
+//                 // }
+
+//                 countRows++;
+//                 // if (countRows <= difficulty) {
+//                 //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
+//                 // }
+//                 // } else {
+//                 //     document.querySelector("#row1ChoiceColor1").classList.toggle("waitForAction");
+//             }
+//         } //n
+//         // if (!gameOn) {
+//         //     return;
+//         // }
+//         // console.log("hello");
+//     } else if (countRows === difficulty++) {
+//         // GAME OVER
+
+//         console.log("Game over");
+//     }
+//     // to see what is pushed
+//     // console.log(pushedColor);
+// }

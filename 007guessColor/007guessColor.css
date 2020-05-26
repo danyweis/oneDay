@@ -38,19 +38,18 @@ body {
 }
 
 /* display none when we show the colors */
-#guessTheColor {
+.guessTheColor {
     grid-row: 2/3;
     grid-column: 1/4;
     text-align: center;
     height: 100%;
     align-self: center;
     text-transform: uppercase;
-    display: none;
     letter-spacing: 0.5rem;
 }
 
 /* display none when the game is running  */
-#resultWindow {
+.resultWindow {
     height: 100%;
     border-radius: 5px;
     box-shadow: 0 2px 2px #ffffff50, 0 -2px 2px #00000050;
@@ -61,7 +60,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
-    /* display: none; */
 }
 /* chosen bullet is 36px else is 30px  */
 /* .colorBullet {
@@ -216,30 +214,6 @@ body {
     background-color: rgb(243, 89, 33);
 }
 
-/* ANIMATION TIME PLAYER NOT DOING SOmETHING */
-.waitForAction {
-    border: 2px solid greenyellow;
-    width: 32px;
-    height: 32px;
-    animation: selection 1s infinite;
-    /* background-color: pink; */
-}
-
-@keyframes selection {
-    0% {
-        width: 32px;
-        height: 32px;
-    }
-    50% {
-        width: 30px;
-        height: 30px;
-    }
-    100% {
-        width: 32px;
-        height: 32px;
-    }
-}
-
 /* ALL THE BUTTONS */
 .btn {
     cursor: pointer;
@@ -378,7 +352,7 @@ body {
 
 /* TIME BOX */
 
-#timeScore {
+.timeScore {
     z-index: 10;
     top: 0;
     left: 0;
@@ -389,7 +363,6 @@ body {
     justify-content: center;
     align-items: center;
     /* background-color: #f5f5f520; */
-    display: none;
 }
 
 .timeScoreBox {
@@ -418,14 +391,15 @@ body {
 } */
 
 /* IF NEW BEST TIME #newBestTime WILL BE SHOWN AND .currentTime BE HIDDEN */
-#newBestTime {
-    display: none;
-}
+
 .newBestTimeImg {
     height: 100px;
 }
 #newBestTime {
     font-size: 2rem;
+}
+.gameOver {
+    font-size: 3rem;
 }
 
 .playResetBox {
@@ -537,6 +511,30 @@ body {
     box-shadow: 2px 2px 1px #00000050, -2px -2px 1px #ffffff;
 }
 
+/* ANIMATION TIME PLAYER NOT DOING SOmETHING */
+.waitForAction {
+    border: 2px solid greenyellow;
+    animation: selection 1s infinite;
+    background-color: #00000050;
+}
+
+@keyframes selection {
+    0% {
+        transform: scale(1.01);
+    }
+    50% {
+        transform: scale(0.97);
+    }
+    100% {
+        transform: scale(1.01);
+    }
+}
+
+.radio {
+    height: 35px;
+    width: 35px;
+}
+
 .masterHacker {
     display: none;
 }
@@ -562,14 +560,14 @@ body {
         /* line-height: 110%; */
     }
 
-    .waitForAction {
+    /* .waitForAction {
         border: 2px solid greenyellow;
         width: 36px;
         height: 36px;
         animation: selection 1s infinite;
-    }
+    } */
 
-    @keyframes selection {
+    /* @keyframes selection {
         0% {
             width: 32px;
             height: 32px;
@@ -582,7 +580,7 @@ body {
             width: 32px;
             height: 32px;
         }
-    }
+    } */
     .btnImgFront,
     .btnImgBack {
         max-height: 35px;

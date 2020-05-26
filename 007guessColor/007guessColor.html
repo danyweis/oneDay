@@ -13,9 +13,9 @@
     <body>
         <div class="gameBoard darkMode">
             <div class="head">
-                <h1 id="guessTheColor">crack the code</h1>
+                <h1 class="guessTheColor">crack the code</h1>
 
-                <div id="resultWindow">
+                <div class="resultWindow displayNone">
                     <div id="resultColor1" class="colorBullet"></div>
                     <div id="resultColor2" class="colorBullet"></div>
                     <div id="resultColor3" class="colorBullet"></div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="emptyBlockL"></div>
                     <div id="choiceColorBlock1" class="choiceColor">
-                        <div id="row1ChoiceColor1" class="choiceColorHole waitForAction"></div>
+                        <div id="row1ChoiceColor1" class="choiceColorHole"></div>
                         <div id="row1ChoiceColor2" class="choiceColorHole"></div>
                         <div id="row1ChoiceColor3" class="choiceColorHole"></div>
                         <div id="row1ChoiceColor4" class="choiceColorHole"></div>
@@ -362,14 +362,14 @@
                 </div>
             </div>
             <!-- END HELP BOX -->
-            <div id="timeScore">
+            <div class="timeScore displayNone">
                 <div class="timeScoreBox">
-                    <!-- <div class="boxX" id="xTimeScore">X</div> -->
+                    <h4 class="gameOver displayNone">Game over</h4>
                     <h4 class="timeHeader currentTime">Current Time</h4>
                     <div id="currentTimeNumbers" class="timeScoreNumbers currentTime">
                         Easy 00:00
                     </div>
-                    <div id="newBestTime">
+                    <div id="newBestTime" class="displayNone">
                         <img class="newBestTimeImg" src="007best.svg" alt="first place image" />
                         <h3>Wow, well done you have a new</h3>
                     </div>
@@ -413,7 +413,8 @@
                     </div>
                     <div class="welcomeText textBox">
                         <div class="lookBox">
-                            <input type="radio" name="difficulty" id="difficultyEasy" value="12" checked />
+                            <!-- set value to 2 for debugging -->
+                            <input type="radio" class="radio" name="difficulty" id="difficultyEasy" value="12" checked />
                         </div>
                         <div class="emptyBlockL"></div>
                         <div class="explainBoxStart">
@@ -425,7 +426,7 @@
                     </div>
                     <div class="welcomeText textBox">
                         <div class="lookBox">
-                            <input type="radio" name="difficulty" id="difficultyMedium" value="10" />
+                            <input type="radio" class="radio" name="difficulty" id="difficultyMedium" value="10" />
                         </div>
                         <div class="emptyBlockL"></div>
                         <div class="explainBoxStart">
@@ -437,7 +438,7 @@
                     </div>
                     <div class="welcomeText textBox">
                         <div class="lookBox">
-                            <input type="radio" name="difficulty" id="difficultyHard" value="8" />
+                            <input type="radio" class="radio" name="difficulty" id="difficultyHard" value="8" />
                         </div>
                         <div class="emptyBlockL"></div>
                         <div class="explainBoxStart">
