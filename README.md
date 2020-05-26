@@ -141,25 +141,24 @@ This is a hero slider build with no JavaScript only CSS
 
 ##### What I used:
 
-- CSS keyframes
+-   CSS keyframes
 
 ##### What did I learn:
 
- - how to use CSS keyframes
+-   how to use CSS keyframes
 
 Started & Finished: 24/05/2020
 
 ---
 
-### Update
+### Update project #7
 
 #### Description:
-Today no finished project to show I do currently work on a bigger project since yesterday  
-the 25/05/2020, It is the guess the color game everything in HTML CSS AND Vanilla JavaScript  
-I'm currently working in the JavaScript to look if the players choice is the same as the hidden colors
 
-![Guess the color](guessColor/welcome.png)![Guess the color](guessColor/playingfield.png)
+Today no finished project to show I do currently work on a bigger project since  
+the 25/05/2020, It is the guess the color game everything in HTML CSS AND Vanilla JavaScript
 
+![Guess the color](007guessColor/007welcome.png)![Guess the color](007guessColor/007playingfield.png)
 
 ---
 
