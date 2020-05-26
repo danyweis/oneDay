@@ -162,6 +162,14 @@ the 25/05/2020, It is the guess the color game everything in HTML CSS AND Vanill
 
 ---
 
+### Update project #7
+
+#### Description:
+
+The game is now playable but still some bugs to fix and the time system is not yet in place
+
+## ![Guess the color](007guessColor/007rules.png)
+
 ### #Number Name
 
 #### Description:
