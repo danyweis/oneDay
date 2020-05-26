@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="007guessColor.ico" type="image/x-icon" />
+        <link rel="icon" href="007guessColor.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="007guessColor.css" />
+        <title>Guess the color</title>
+    </head>
+    <body>
+        <div class="gameBoard darkMode">
+            <div class="head">
+                <h1 id="guessTheColor">crack the code</h1>
+
+                <div id="resultWindow">
+                    <div id="resultColor1" class="colorBullet"></div>
+                    <div id="resultColor2" class="colorBullet"></div>
+                    <div id="resultColor3" class="colorBullet"></div>
+                    <div id="resultColor4" class="colorBullet"></div>
+                </div>
+            </div>
+            <!-- HEAD END -->
+            <div class="gameArea">
+                <div class="colorRow easy medium hard" id="row1">
+                    <div id="correctColorBlock1" class="correctColor">
+                        <div id="row1color1" class="correctColorHole rowColor1"></div>
+                        <div id="row1color2" class="correctColorHole rowColor2"></div>
+                        <div id="row1color3" class="correctColorHole rowColor3"></div>
+                        <div id="row1color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock1" class="choiceColor">
+                        <div id="row1ChoiceColor1" class="choiceColorHole waitForAction"></div>
+                        <div id="row1ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row1ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row1ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #1 END -->
+
+                <div class="colorRow easy medium hard" id="row2">
+                    <div id="correctColorBlock2" class="correctColor">
+                        <div id="row2color1" class="correctColorHole rowColor1"></div>
+                        <div id="row2color2" class="correctColorHole rowColor2"></div>
+                        <div id="row2color3" class="correctColorHole rowColor3"></div>
+                        <div id="row2color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock2" class="choiceColor">
+                        <div id="row2ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row2ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row2ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row2ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #2 END -->
+                <div class="colorRow easy medium hard" id="row3">
+                    <div id="correctColorBlock3" class="correctColor">
+                        <div id="row3color1" class="correctColorHole rowColor1"></div>
+                        <div id="row3color2" class="correctColorHole rowColor2"></div>
+                        <div id="row3color3" class="correctColorHole rowColor3"></div>
+                        <div id="row3color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock3" class="choiceColor">
+                        <div id="row3ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row3ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row3ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row3ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #3 END -->
+                <div class="colorRow easy medium hard" id="row4">
+                    <div id="correctColorBlock4" class="correctColor">
+                        <div id="row4color1" class="correctColorHole rowColor1"></div>
+                        <div id="row4color2" class="correctColorHole rowColor2"></div>
+                        <div id="row4color3" class="correctColorHole rowColor3"></div>
+                        <div id="row4color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock4" class="choiceColor">
+                        <div id="row4ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row4ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row4ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row4ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #4 END -->
+                <div class="colorRow easy medium hard" id="row5">
+                    <div id="correctColorBlock5" class="correctColor">
+                        <div id="row5color1" class="correctColorHole rowColor1"></div>
+                        <div id="row5color2" class="correctColorHole rowColor2"></div>
+                        <div id="row5color3" class="correctColorHole rowColor3"></div>
+                        <div id="row5color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock5" class="choiceColor">
+                        <div id="row5ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row5ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row5ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row5ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #5 END -->
+                <div class="colorRow easy medium hard" id="row6">
+                    <div id="correctColorBlock6" class="correctColor">
+                        <div id="row6color1" class="correctColorHole rowColor1"></div>
+                        <div id="row6color2" class="correctColorHole rowColor2"></div>
+                        <div id="row6color3" class="correctColorHole rowColor3"></div>
+                        <div id="row6color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock6" class="choiceColor">
+                        <div id="row6ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row6ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row6ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row6ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #6 END -->
+                <div class="colorRow easy medium hard" id="row7">
+                    <div id="correctColorBlock7" class="correctColor">
+                        <div id="row7color1" class="correctColorHole rowColor1"></div>
+                        <div id="row7color2" class="correctColorHole rowColor2"></div>
+                        <div id="row7color3" class="correctColorHole rowColor3"></div>
+                        <div id="row7color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock7" class="choiceColor">
+                        <div id="row7ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row7ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row7ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row7ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #7 END -->
+                <div class="colorRow easy medium hard" id="row8">
+                    <div id="correctColorBlock8" class="correctColor">
+                        <div id="row8color1" class="correctColorHole rowColor1"></div>
+                        <div id="row8color2" class="correctColorHole rowColor2"></div>
+                        <div id="row8color3" class="correctColorHole rowColor3"></div>
+                        <div id="row8color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock8" class="choiceColor">
+                        <div id="row8ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row8ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row8ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row8ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #8 END -->
+                <div class="colorRow easy medium" id="row9">
+                    <div id="correctColorBlock9" class="correctColor">
+                        <div id="row9color1" class="correctColorHole rowColor1"></div>
+                        <div id="row9color2" class="correctColorHole rowColor2"></div>
+                        <div id="row9color3" class="correctColorHole rowColor3"></div>
+                        <div id="row9color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock9" class="choiceColor">
+                        <div id="row9ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row9ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row9ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row9ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #9 END -->
+                <div class="colorRow easy medium" id="row10">
+                    <div id="correctColorBlock10" class="correctColor">
+                        <div id="row10color1" class="correctColorHole rowColor1"></div>
+                        <div id="row10color2" class="correctColorHole rowColor2"></div>
+                        <div id="row10color3" class="correctColorHole rowColor3"></div>
+                        <div id="row10color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock10" class="choiceColor">
+                        <div id="row10ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row10ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row10ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row10ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #10 END -->
+                <div class="colorRow easy" id="row11">
+                    <div id="correctColorBlock11" class="correctColor">
+                        <div id="row11color1" class="correctColorHole rowColor1"></div>
+                        <div id="row11color2" class="correctColorHole rowColor2"></div>
+                        <div id="row11color3" class="correctColorHole rowColor3"></div>
+                        <div id="row11color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock11" class="choiceColor">
+                        <div id="row11ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row11ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row11ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row11ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #11 END -->
+                <div class="colorRow easy" id="row12">
+                    <div id="correctColorBlock12" class="correctColor">
+                        <div id="row12color1" class="correctColorHole rowColor1"></div>
+                        <div id="row12color2" class="correctColorHole rowColor2"></div>
+                        <div id="row12color3" class="correctColorHole rowColor3"></div>
+                        <div id="row12color4" class="correctColorHole rowColor4"></div>
+                    </div>
+                    <div class="emptyBlockL"></div>
+                    <div id="choiceColorBlock12" class="choiceColor">
+                        <div id="row12ChoiceColor1" class="choiceColorHole"></div>
+                        <div id="row12ChoiceColor2" class="choiceColorHole"></div>
+                        <div id="row12ChoiceColor3" class="choiceColorHole"></div>
+                        <div id="row12ChoiceColor4" class="choiceColorHole"></div>
+                    </div>
+
+                    <div class="emptyBlockR"></div>
+                </div>
+                <!-- ROW #12 END -->
+            </div>
+            <!-- GAME AREA END -->
+            <footer class="footer">
+                <div class="buttonRow1">
+                    <div class="btn buttons buttonColor1" id="row1button1"></div>
+                    <div class="btn buttons buttonColor2" id="row1button2"></div>
+                    <div class="btn buttons buttonColor3" id="row1button3"></div>
+                    <div class="btn buttons buttonOK" id="row1button4">
+                        <img class="btnImgFront" src="007OK.png" alt="" />
+                        <img class="btnImgBack" src="007OK.png" alt="" />
+                    </div>
+                    <div class="btn buttons buttonEnd" id="row1button5">
+                        <img class="btnImgFront" src="007end.png" alt="" />
+                        <img class="btnImgBack" src="007end.png" alt="" />
+                    </div>
+                </div>
+                <div class="buttonRow2">
+                    <div class="btn buttons buttonColor4" id="row2button1"></div>
+                    <div class="btn buttons buttonColor5" id="row2button2"></div>
+                    <div class="btn buttons buttonColor6" id="row2button3"></div>
+                    <div class="btn buttons buttonBack" id="row2button4">
+                        <img class="btnImgFront" src="007back.svg" alt="" />
+                        <img class="btnImgBack" src="007back.svg" alt="" />
+                    </div>
+                    <div class="btn buttons buttonQuestion" id="row2button5">
+                        <img class="btnImgFront" src="007question.svg" alt="" />
+                        <img class="btnImgBack" src="007question.svg" alt="" />
+                    </div>
+                </div>
+            </footer>
+            <!-- FOOTER END -->
+
+            <!-- HELP BOX AFTER CLICKING THE QUESTION MARK -->
+
+            <div id="helpBox">
+                <div class="helpBoxContainer">
+                    <div class="boxX" id="xHelpBox">X</div>
+                    <div class="textBox rulesBox">
+                        <h2>Rules</h2>
+                        <p>
+                            Guess which colors are hidden at the top! Each round you pick 4 colors from the bottom – then the orange and green pegs will hint at how good your guess is.
+                        </p>
+                    </div>
+                    <!-- ORANGE DOT -->
+                    <div class="textBox textBox1">
+                        <div class="lookBox">
+                            <div id="correctColorBlockHelp" class="correctColor">
+                                <div id="row1color1Help" class="correctColorCC correctColorHole rowColor1"></div>
+                                <div id="row1color2Help" class="correctColorHole rowColor2"></div>
+                                <div id="row1color3Help" class="correctColorHole rowColor3"></div>
+                                <div id="row1color4Help" class="correctColorHole rowColor4"></div>
+                            </div>
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>Correct color, but at wrong position</p>
+                        </div>
+                    </div>
+                    <!-- GREEN DOT -->
+                    <div class="textBox textBox2">
+                        <div class="lookBox">
+                            <div id="correctColorBlockHelp" class="correctColor">
+                                <div id="row1color1Help" class="correctColorCCP correctColorHole rowColor1"></div>
+                                <div id="row1color2Help" class="correctColorHole rowColor2"></div>
+                                <div id="row1color3Help" class="correctColorHole rowColor3"></div>
+                                <div id="row1color4Help" class="correctColorHole rowColor4"></div>
+                            </div>
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                Correct color, correct position
+                            </p>
+                        </div>
+                    </div>
+                    <!-- VALIDATION  -->
+                    <div class="textBox textBox3">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="007OK.png" alt="" />
+                            <img class="btnImgBack" src="007OK.png" alt="" />
+                        </div>
+
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                After you did put in the 4 colors you then press this button to validate you choice.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CORRECTION -->
+                    <div class="textBox textBox4">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="007back.svg" alt="" />
+                            <img class="btnImgBack" src="007back.svg" alt="" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>
+                                With this button you can correct you choice before validating the row.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- END THE GAME -->
+                    <div class="textBox textBox5">
+                        <div class="lookBox">
+                            <img class="btnImgFront" src="007end.png" alt="" />
+                            <img class="btnImgBack" src="007end.png" alt="" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+
+                        <div class="explainBox">
+                            <p>This button will stop the game.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END HELP BOX -->
+            <div id="timeScore">
+                <div class="timeScoreBox">
+                    <!-- <div class="boxX" id="xTimeScore">X</div> -->
+                    <h4 class="timeHeader currentTime">Current Time</h4>
+                    <div id="currentTimeNumbers" class="timeScoreNumbers currentTime">
+                        Easy 00:00
+                    </div>
+                    <div id="newBestTime">
+                        <img class="newBestTimeImg" src="007best.svg" alt="first place image" />
+                        <h3>Wow, well done you have a new</h3>
+                    </div>
+                    <h4 class="timeHeader currentBestTime">Best Time</h4>
+                    <div id="currentBestTimeNumbers" class="timeScoreNumbers">
+                        Hard 00:00
+                    </div>
+                    <div class="playResetBox">
+                        <button id="playButton" class="btn playResetBtn playResetBtnLeft">
+                            Restart
+                        </button>
+                        <button id="resetButton" class="btn playResetBtn playResetBtnRight">
+                            Reset Time
+                        </button>
+                    </div>
+                    <div class="resetConfirmation">
+                        <div class="resetConfirmationBox">
+                            <h5>Do you really want to reset your best time?</h5>
+                            <div class="playResetBox">
+                                <button id="cancel" class="btn playResetBtn playResetBtnLeft">
+                                    Cancel</button
+                                ><button id="reset" class="btn playResetBtn playResetBtnRight">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TIME SCORE -->
+            <!-- WELCOME AND AFTER PRESS ENF BUTTON -->
+            <div id="welcome">
+                <div class="welcomeBox">
+                    <div class="welcomeText textBox">
+                        <h2 class="textBoxText welcomeHeader">
+                            Crack the code
+                        </h2>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <h3 class="textBoxText">Chose your difficulty:</h3>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input type="radio" name="difficulty" id="difficultyEasy" value="easy" checked />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Easy</h5>
+                            <p>
+                                In the easy mode you have 12 guesses before the game is over!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input type="radio" name="difficulty" id="difficultyMedium" value="medium" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Medium</h5>
+                            <p>
+                                In the medium mode you have 10 guesses before the game is over!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="welcomeText textBox">
+                        <div class="lookBox">
+                            <input type="radio" name="difficulty" id="difficultyHard" value="hard" />
+                        </div>
+                        <div class="emptyBlockL"></div>
+                        <div class="explainBoxStart">
+                            <h5>Hard</h5>
+                            <p>
+                                In the hard mode you have only 8 guesses before the game is over!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- START BUTTON -->
+                <div class="start">
+                    <button id="startGame" class="btn playResetBtnFull">
+                        Give it a try!
+                    </button>
+                </div>
+            </div>
+            <!-- END WELCOME PAGE -->
+            <h2 class="masterHacker">master hacker</h2>
+        </div>
+        <script src="007guessColor.js"></script>
+    </body>
+</html>

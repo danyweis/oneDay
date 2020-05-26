@@ -64,12 +64,11 @@ body {
     /* display: none; */
 }
 /* chosen bullet is 36px else is 30px  */
-.colorBullet {
-    /* background: aqua; */
+/* .colorBullet {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-}
+} */
 
 /* GAME AREA */
 
@@ -169,35 +168,59 @@ body {
 
 .buttonColor1,
 .colorBullet1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(33, 33, 209);
 }
 
 .buttonColor2,
 .colorBullet2 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(33, 136, 33);
 }
 .buttonColor3,
 .colorBullet3 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(180, 30, 30);
 }
 .buttonColor4,
 .colorBullet4 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(238, 238, 33);
 }
 .buttonColor5,
 .colorBullet5 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(94, 33, 155);
 }
 .buttonColor6,
 .colorBullet6 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(243, 89, 33);
 }
 
 /* ANIMATION TIME PLAYER NOT DOING SOmETHING */
 .waitForAction {
     border: 2px solid greenyellow;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     animation: selection 1s infinite;
     /* background-color: pink; */
 }
@@ -208,8 +231,8 @@ body {
         height: 32px;
     }
     50% {
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
     }
     100% {
         width: 32px;
@@ -269,11 +292,11 @@ body {
 .btnImgFront {
     filter: drop-shadow(0px -2px 2px #ffffff70);
     position: absolute;
-    max-height: 35px;
+    max-height: 32px;
 }
 .btnImgBack {
     filter: drop-shadow(0px 2px 2px #000000);
-    max-height: 35px;
+    max-height: 32px;
 }
 
 /* HELP BOX */
@@ -289,7 +312,7 @@ body {
     left: 0;
     border-radius: 15px;
     /* !!!! HAS TO BE TAKEN AWAY */
-    display: none;
+    /* display: none; */
 }
 
 /* x TO CLOSE THE WINDOW */
@@ -465,9 +488,9 @@ body {
     width: 100%;
     background-color: #f5f5f5;
 
-    /* !!!! HAVE TO BE TAKEN AWAY */
+    /* !!!! HAS TO BE TAKEN AWAY */
 
-    display: none;
+    /* display: none; */
 }
 
 .welcomeBox {
@@ -537,6 +560,32 @@ body {
         text-transform: uppercase;
         letter-spacing: 10px;
         /* line-height: 110%; */
+    }
+
+    .waitForAction {
+        border: 2px solid greenyellow;
+        width: 36px;
+        height: 36px;
+        animation: selection 1s infinite;
+    }
+
+    @keyframes selection {
+        0% {
+            width: 32px;
+            height: 32px;
+        }
+        50% {
+            width: 36px;
+            height: 36px;
+        }
+        100% {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .btnImgFront,
+    .btnImgBack {
+        max-height: 35px;
     }
 }
 
