@@ -160,7 +160,7 @@ function getRandomColor() {
     }
     gameOn = true;
     userInputStorage.randomColor = randomColorArray;
-    console.log(randomColorArray);
+    // console.log(randomColorArray);
 }
 
 function getUserInput(pushedColor) {
@@ -222,10 +222,10 @@ function getUserInput(pushedColor) {
 function checkIfWin() {
     for (let n = 0; n < userInputStorage["randomColor"].length; n++) {
         if (userInputStorage["randomColor"][n] !== userInputStorage[countRows][n]) {
-            console.log(countRows + " <= rows " + difficulty + " <= difficulty");
+            // console.log(countRows + " <= rows " + difficulty + " <= difficulty");
 
             if (countRows == difficulty) {
-                console.log(currentTime);
+                // console.log(currentTime);
                 // currentTime.classList.toggle("displayNone");
                 gameOverPage();
                 console.log("Game over");
