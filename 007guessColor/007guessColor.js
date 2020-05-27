@@ -43,7 +43,7 @@ const userInputStorage = {}; // Look how to empty the
 //WELCOME PAGE
 
 // get out of the welcome page
-let difficulty = 2; // <== set difficulty to 8 to test the game <== (AWAY)
+let difficulty = null; // <== set difficulty to 8 to test the game <== (AWAY)
 let welcomePage = document.querySelector("#welcome");
 
 function setDifficulty() {
@@ -79,6 +79,7 @@ function openCloseRules() {
     helpBox.classList.toggle("displayNone");
 }
 
+// restarts the game
 function resetTimeScorePageValues() {
     resetAllTheCSS();
     resetAllTheData();
@@ -89,10 +90,15 @@ function resetTimeScorePageValues() {
 }
 
 function resetAfterTimeScorePage() {
-    console.log("hello");
     guessTheColor.classList.remove("displayNone");
     resultWindow.classList.add("displayNone");
     timeScorePage.classList.toggle("displayNone");
+
+    if (gameOver.classList.contains("displayNone")) {
+        newBestTime.classList.toggle("displayNone");
+    } else {
+        gameOver.classList.toggle("displayNone");
+    }
     resetTimeScorePageValues();
 }
 
@@ -103,18 +109,9 @@ function timeScore() {
     guessTheColor.classList.toggle("displayNone");
     resultWindow.classList.toggle("displayNone");
     timeScorePage.classList.toggle("displayNone");
+    newBestTime.classList.toggle("displayNone");
     let restartTimeScorePage = document.querySelector("#playButton");
     restartTimeScorePage.addEventListener("click", resetAfterTimeScorePage);
-}
-
-function resetGameOverPage() {
-    // if time implemented
-    gameOver.classList.toggle("displayNone");
-    newBestTime.classList.toggle("displayNone");
-
-    // for (let i = 0; i < currentTime.length; i++) {
-    //     currentTime[i].classList.toggle("displayNone");
-    // }
 }
 
 function gameOverPage() {
@@ -122,8 +119,8 @@ function gameOverPage() {
     guessTheColor.classList.toggle("displayNone");
     resultWindow.classList.toggle("displayNone");
     gameOver.classList.toggle("displayNone");
-    newBestTime.classList.toggle("displayNone");
 
+    // newBestTime.classList.toggle("displayNone");
     // If time implemented
     // for (let i = 0; i < currentTime.length; i++) {
     //     currentTime[i].classList.toggle("displayNone");
@@ -132,8 +129,6 @@ function gameOverPage() {
     timeScorePage.classList.remove("displayNone");
     let restartTimeScorePage = document.querySelector("#playButton");
     restartTimeScorePage.addEventListener("click", resetAfterTimeScorePage);
-    restartTimeScorePage.addEventListener("click", resetGameOverPage);
-    // currentTime.map((a) => a.classList.toggle("displayNone"));
 }
 
 // START THE GAME GET THE RANDOM COLORS
@@ -233,7 +228,7 @@ function checkIfWin() {
                 console.log(currentTime);
                 // currentTime.classList.toggle("displayNone");
                 gameOverPage();
-                // console.log("Game over");
+                console.log("Game over");
                 return;
             }
             return;
@@ -330,7 +325,6 @@ function resetTheObject(countRows) {
 function resetAllTheData() {
     userInputNumbers = [];
     changesArray = [];
-    // difficulty = null;
 }
 
 // Actions for the event listeners
