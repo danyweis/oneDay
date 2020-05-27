@@ -13,10 +13,13 @@ let color6BTN = document.querySelector("#row2button3");
 let validBTN = document.querySelector("#row1button4");
 let backBTN = document.querySelector("#row2button4");
 
+// GLOBAL VARIABLES
+
 let gameOver = document.querySelector(".gameOver");
 let currentTime = document.querySelectorAll(".currentTime");
 let resultWindow = document.querySelector(".resultWindow");
 let guessTheColor = document.querySelector(".guessTheColor");
+let newBestTime = document.querySelector("#newBestTime");
 
 // store all the changes in the HTML to reset everything at the end of the game
 let changesArray = [];
@@ -24,8 +27,18 @@ let changesArray = [];
 // if gameOn is false we don't react on the input of the user
 let gameOn = false;
 
+// count will be incremented when one row is full and validated
+let countRows = 1;
+
+// round will count the user inputs
+let round = 1;
+
+let userInputNumbers = [];
+
 // OBJECT TO STORE USER INPUT
 const userInputStorage = {}; // Look how to empty the
+
+// END GLOBAL VARIABLES
 
 //WELCOME PAGE
 
@@ -77,8 +90,8 @@ function resetTimeScorePageValues() {
 
 function resetAfterTimeScorePage() {
     console.log("hello");
-    // guessTheColor.classList.remove("displayNone");
-    // resultWindow.classList.add("displayNone");
+    guessTheColor.classList.remove("displayNone");
+    resultWindow.classList.add("displayNone");
     timeScorePage.classList.toggle("displayNone");
     resetTimeScorePageValues();
 }
@@ -95,13 +108,13 @@ function timeScore() {
 }
 
 function resetGameOverPage() {
-    // adds displayNone
-    guessTheColor.classList.toggle("displayNone");
-    resultWindow.classList.toggle("displayNone");
+    // if time implemented
     gameOver.classList.toggle("displayNone");
-    for (let i = 0; i < currentTime.length; i++) {
-        currentTime[i].classList.toggle("displayNone");
-    }
+    newBestTime.classList.toggle("displayNone");
+
+    // for (let i = 0; i < currentTime.length; i++) {
+    //     currentTime[i].classList.toggle("displayNone");
+    // }
 }
 
 function gameOverPage() {
@@ -109,9 +122,12 @@ function gameOverPage() {
     guessTheColor.classList.toggle("displayNone");
     resultWindow.classList.toggle("displayNone");
     gameOver.classList.toggle("displayNone");
-    for (let i = 0; i < currentTime.length; i++) {
-        currentTime[i].classList.toggle("displayNone");
-    }
+    newBestTime.classList.toggle("displayNone");
+
+    // If time implemented
+    // for (let i = 0; i < currentTime.length; i++) {
+    //     currentTime[i].classList.toggle("displayNone");
+    // }
 
     timeScorePage.classList.remove("displayNone");
     let restartTimeScorePage = document.querySelector("#playButton");
@@ -149,15 +165,8 @@ function getRandomColor() {
     }
     gameOn = true;
     userInputStorage.randomColor = randomColorArray;
+    console.log(randomColorArray);
 }
-
-// count will be incremented when one row is full and validated
-let countRows = 1;
-
-// round will count the user inputs
-let round = 1;
-
-let userInputNumbers = [];
 
 function getUserInput(pushedColor) {
     const userPlaceholder = [];
@@ -367,80 +376,3 @@ endBTN.addEventListener("click", backToWelcomePage);
 questionBTN.addEventListener("click", openCloseRules);
 xHelpBox.addEventListener("click", openCloseRules);
 startButton.addEventListener("click", setDifficulty);
-
-//DONT KNOW IF GONNA USE AGAIN
-// function getUserInput(pushedColor) {
-//     console.log(countRows);
-//     const userPlaceholder = [];
-//     if (countRows <= difficulty) {
-//         if (pushedColor >= 1 && pushedColor <= 6 && round <= 4) {
-//             // userPlaceholder.push(pushedColor);
-//             document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle(`colorBullet${pushedColor}`);
-
-//             // push the id and the classList to reset them later
-//             userPlaceholder.push(`#row${countRows}ChoiceColor${round}`);
-//             userPlaceholder.push(`colorBullet${pushedColor}`);
-
-//             //push placeholder in changesArray
-//             changesArray.push(userPlaceholder);
-//             // document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-//             round++;
-
-//             // when the last color is set the wait for action does not continue
-//             // if (round < 5) {
-//             //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-//             // }
-
-//             // push the pressed key to userInputNumbers
-//             userInputNumbers.push(pushedColor);
-//         } else if (pushedColor === "back" && round !== 1 && round <= 5) {
-//             // pop out the last array from the
-
-//             document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle(`${changesArray[changesArray.length - 1][1]}`);
-
-//             // while we not at the end of the row
-//             // if (round !== 5) {
-//             //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-//             // }
-
-//             // document.querySelector(`${changesArray[changesArray.length - 1][0]}`).classList.toggle("waitForAction");
-//             round--;
-
-//             // take last elements out of the arrays
-//             changesArray.pop();
-//             userInputNumbers.pop();
-//         } else if (pushedColor === "valid" && round === 5) {
-//             // DO THE MAGIC LOOK IF THE COLORS ARE CORRECT
-//             // get the data to the object
-//             userInputStorage[countRows] = userInputNumbers;
-//             userInputNumbers = [];
-//             round = 1;
-
-//             //This will look if we did win
-//             let winORnot = checkIfWin();
-//             if (!winORnot) {
-//                 // If we did not win we have to look if the colors are correct
-//                 checkCorrectColors();
-
-//                 // }
-
-//                 countRows++;
-//                 // if (countRows <= difficulty) {
-//                 //     document.querySelector(`#row${countRows}ChoiceColor${round}`).classList.toggle("waitForAction");
-//                 // }
-//                 // } else {
-//                 //     document.querySelector("#row1ChoiceColor1").classList.toggle("waitForAction");
-//             }
-//         } //n
-//         // if (!gameOn) {
-//         //     return;
-//         // }
-//         // console.log("hello");
-//     } else if (countRows === difficulty++) {
-//         // GAME OVER
-
-//         console.log("Game over");
-//     }
-//     // to see what is pushed
-//     // console.log(pushedColor);
-// }
