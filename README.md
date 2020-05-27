@@ -21,7 +21,7 @@
 
 ---
 
-### #1 [Momentum clone](https://danyweis.com/Project/smallProjects/001momentum.html)
+# #1 [Momentum clone](https://danyweis.com/Project/smallProjects/001momentum.html)
 
 ![Momentum screenshot](001MomentumClone/1momentum.png)
 
@@ -44,7 +44,7 @@ Started & Finished: 19/05/2020
 
 ---
 
-### #2 [Random background color on click](https://danyweis.com/Project/smallProjects/002randomBGonclick.html)
+# #2 [Random background color on click](https://danyweis.com/Project/smallProjects/002randomBGonclick.html)
 
 ![Random background color screenshot](002RandomBGonclick/2randomBG.png)
 
@@ -65,7 +65,7 @@ Started & Finished: 20/05/2020
 
 ---
 
-### #3 [Color converter](https://danyweis.com/Project/smallProjects/003rgb2hex.html)
+# #3 [Color converter](https://danyweis.com/Project/smallProjects/003rgb2hex.html)
 
 #### Description:
 
@@ -88,7 +88,7 @@ Started & Finished: 21/05/2020
 
 ---
 
-### #4 [Flip a Coin](https://danyweis.com/Project/smallProjects/004FlipCoin.html)
+# #4 [Flip a Coin](https://danyweis.com/Project/smallProjects/004FlipCoin.html)
 
 #### Description:
 
@@ -109,7 +109,7 @@ Started & Finished: 22/05/2020
 
 ---
 
-### #5 [What age?](https://danyweis.com/Project/smallProjects/005age.html)
+# #5 [What age?](https://danyweis.com/Project/smallProjects/005age.html)
 
 #### Description:
 
@@ -131,7 +131,7 @@ Started & Finished: 23/05/2020
 
 ---
 
-### #6 [CSS Hero slider](https://danyweis.com/Project/smallProjects/006heroSlider.html)
+# #6 [CSS Hero slider](https://danyweis.com/Project/smallProjects/006heroSlider.html)
 
 #### Description:
 
@@ -151,37 +151,65 @@ Started & Finished: 24/05/2020
 
 ---
 
-### Update project #7
+# Update project #7
 
 #### Description:
 
 Today no finished project to show I do currently work on a bigger project since  
 the 25/05/2020, It is the guess the color game everything in HTML CSS AND Vanilla JavaScript
 
-![Guess the color](007guessColor/007welcome.png)![Guess the color](007guessColor/007playingfield.png)
+![Guess the color](007guessColor/007welcome.png)
 
 ---
 
-### Update project #7
+# Update project #7
 
 #### Description:
 
 The game is now playable but still some bugs to fix and the time system is not yet in place
 
-## ![Guess the color](007guessColor/007rules.png)
+![Guess the color](007guessColor/007rules.png)
 
-### #Number Name
+---
+
+# #7 [Guess the color](https://danyweis.com/Project/smallProjects/007guessColor.html)
+
+#### Description:
+
+This is the game guess the color
+
+![Guess the color](007guessColor/007playingfield.png)
+
+##### What I used:
+
+-   HTML
+-   CSS grid
+-   Vanilla JavaScript
+
+##### What did I learn:
+
+-   how to handle user inputs on buttons
+-   display elements depending on the inputs
+-   the game works without page reload
+
+Started & Finished: 25/05/2020 -> 27/05/2020
+
+// There will be a time count implemented later on with storing best times in local storage
+
+---
+
+# #Number Name
 
 #### Description:
 
 => image ![]()
 
-##### What I used:
+#### What I used:
 
-## -
+-
 
-##### What did I learn:
+#### What did I learn:
 
-## -
+-
 
 Started & Finished: Date
