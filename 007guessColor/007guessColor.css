@@ -37,7 +37,7 @@ body {
 /* HEAD  */
 .head {
     box-shadow: 0 2px 2px #00000050;
-    height: 15%;
+    height: 12%;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     display: grid;
@@ -79,7 +79,7 @@ body {
 /* GAME AREA */
 
 .gameArea {
-    height: 70%;
+    height: 73%;
     /* background: pink; */
     width: 100%;
     display: grid;
@@ -158,24 +158,24 @@ body {
 }
 
 .choiceColorHole {
-    height: 24px;
-    width: 24px;
+    height: 18px;
+    width: 18px;
     border-radius: 50%;
     box-shadow: 0 4px 4px #00000075 inset, 0 -4px 4px #ffffff50 inset;
 }
 
 /* General size of the bullets in the result window */
 .colorBullet {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
 }
 
 .buttonColor1,
 .colorBullet1 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(33, 33, 209);
@@ -183,40 +183,40 @@ body {
 
 .buttonColor2,
 .colorBullet2 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(33, 136, 33);
 }
 .buttonColor3,
 .colorBullet3 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(180, 30, 30);
 }
 .buttonColor4,
 .colorBullet4 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(238, 238, 33);
 }
 .buttonColor5,
 .colorBullet5 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(94, 33, 155);
 }
 .buttonColor6,
 .colorBullet6 {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     box-shadow: 0 -4px 4px #00000075 inset, 0 4px 3px #ffffff50 inset;
     background-color: rgb(243, 89, 33);
@@ -401,12 +401,12 @@ body {
 /* IF NEW BEST TIME #newBestTime WILL BE SHOWN AND .currentTime BE HIDDEN */
 
 .newBestTimeImg {
-    height: 100px;
+    height: 80px;
     /* take away when time is implemented */
-    margin: 40px;
+    margin: 20px;
 }
 #newBestTime {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .gameOver {
     /* take away when time is implemented */
@@ -416,7 +416,7 @@ body {
 
 .playResetBox {
     display: flex;
-    height: 15%;
+    height: 25%;
 }
 .playResetBtn {
     display: flex;
@@ -553,6 +553,40 @@ body {
 /* BIGGER SCREEN THEN  PHONES */
 
 @media (min-width: 450px) {
+    .colorBullet1 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .colorBullet2 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .colorBullet3 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .colorBullet4 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .colorBullet5 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .colorBullet6 {
+        height: 30px;
+        width: 30px;
+    }
+
+    .choiceColorHole {
+        height: 24px;
+        width: 24px;
+    }
     .gameBoard {
         width: 400px;
         height: 800px;
@@ -572,33 +606,19 @@ body {
         /* line-height: 110%; */
     }
 
-    /* .waitForAction {
-        border: 2px solid greenyellow;
-        width: 36px;
-        height: 36px;
-        animation: selection 1s infinite;
-    } */
-
-    /* @keyframes selection {
-        0% {
-            width: 32px;
-            height: 32px;
-        }
-        50% {
-            width: 36px;
-            height: 36px;
-        }
-        100% {
-            width: 32px;
-            height: 32px;
-        }
-    } */
     .btnImgFront,
     .btnImgBack {
         max-height: 35px;
     }
+
+    .newBestTimeImg {
+        height: 100px;
+        /* take away when time is implemented */
+        margin: 40px;
+    }
 }
 
+/* this class will be toggled in JavaScript */
 .displayNone {
     display: none;
 }
