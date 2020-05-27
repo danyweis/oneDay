@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #090826;
+    font-family: "Bungee Shade", cursive;
+}
+
+.time {
+    font-size: 4em;
+    margin: 1em;
+    color: rgb(255, 145, 0);
+}
+.milliseconds {
+    font-size: 0.5em;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn {
+    width: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(255, 145, 0);
+    box-shadow: 4px 4px 7px 3px #00000090;
+    transition: ease 150ms;
+    outline: 0;
+}
+
+.btn:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 5px 7px 5px #00000070;
+}
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 3px 3px 7px 4px #000000;
+}
+
+.btnImg {
+    height: 50px;
+}
+
+.displayNone {
+    display: none;
+}
