@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="008stopWatch.ico" type="image/x-icon" />
+        <link rel="icon" href="008stopWatch.ico" type="image/x-icon" />
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
 
         <link rel="stylesheet" href="008stopWatch.css" />
@@ -11,11 +13,23 @@
     <body>
         <div class="container">
             <div class="time">
-                <h1><span class="minutes">01</span>:<span class="seconds">23</span> <span class="milliseconds">67</span></h1>
+                <h1>
+                    <span class="minutes">00</span>
+                    <span class="textMin textTime">Minutes</span>
+                </h1>
+                <h1>
+                    <span class="seconds">00</span>
+                    <span class="textSec textTime">Seconds</span>
+                </h1>
+                <h1>
+                    <span class="milliseconds">00</span>
+                    <span class="textMs textTime">millisec</span>
+                </h1>
             </div>
             <div class="buttons">
-                <button class="btn"><img class="btnImg btnStart" src="008play.svg" alt="Start icon" /><img class="btnImg btnPause displayNone" src="008pause.svg" alt="Pause icon" /></button>
-                <button class="btn"><img class="btnImg btnReset" src="008reset.svg" alt="Reset icon" /></button>
+                <button class="btn start"><img class="btnImg" src="008play.svg" alt="Start icon" /></button>
+                <button class="btn stop active"><img class="btnImg" src="008pause.svg" alt="Pause icon" /></button>
+                <button class="btn reset"><img class="btnImg" src="008reset.svg" alt="Reset icon" /></button>
             </div>
         </div>
         <script src="008stopWatch.js"></script>

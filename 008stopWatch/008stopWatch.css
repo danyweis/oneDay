@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 0;
 }
 
 .container {
@@ -15,21 +16,40 @@
 }
 
 .time {
+    width: 100vw;
+    min-height: 40vh;
     font-size: 4em;
     margin: 1em;
     color: rgb(255, 145, 0);
+    display: flex;
+    justify-content: space-evenly;
 }
+.time > h1 {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textTime {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
 .milliseconds {
     font-size: 0.5em;
 }
 
 .buttons {
+    min-height: 20vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 .btn {
     width: 200px;
+    height: 80px;
     padding: 15px;
     border: none;
     border-radius: 3px;
@@ -54,4 +74,34 @@
 
 .displayNone {
     display: none;
+}
+
+@media (max-width: 650px) {
+    .time {
+        height: 50vh;
+        font-size: 1.2em;
+    }
+    .milliseconds {
+        font-size: 0.8em;
+    }
+
+    .textTime {
+        display: none;
+    }
+
+    .buttons {
+        height: 50vh;
+    }
+    .btn {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 850px) {
+    .time {
+        font-size: 1.6em;
+    }
+    .milliseconds {
+        font-size: 1em;
+    }
 }

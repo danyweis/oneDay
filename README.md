@@ -198,18 +198,23 @@ Started & Finished: 25/05/2020 -> 27/05/2020
 
 ---
 
-# #Number Name
+# #8 [Stop Watch](https://danyweis.com/Project/smallProjects/008stopWatch.html)
 
 #### Description:
 
-=> image ![]()
+This is a simple stop watch wit start stop and reset function
+
+=> image ![](008stopWatch/008stopWatch.png)
 
 #### What I used:
 
--
+-   Vanilla JavaScript
+-   setInterval
+-   clearInterval
 
 #### What did I learn:
 
--
+-   How to use setInterval
+-   How to use clearInterval
 
-Started & Finished: Date
+Started & Finished: 28/05/2020
