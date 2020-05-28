@@ -204,7 +204,7 @@ Started & Finished: 25/05/2020 -> 27/05/2020
 
 This is a simple stop watch wit start stop and reset function
 
-=> image ![](008stopWatch/008stopWatch.png)
+![screenshot stopwatch app](008stopWatch/008stopWatch.png)
 
 #### What I used:
 
