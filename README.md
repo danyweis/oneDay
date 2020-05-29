@@ -218,3 +218,47 @@ This is a simple stop watch wit start stop and reset function
 -   How to use clearInterval
 
 Started & Finished: 28/05/2020
+
+---
+
+# #9 [Pomodoro](https://danyweis.com/Project/smallProjects/009pomodoro.html)
+
+#### Description:
+
+This is a small Pomodoro I created to be a google chrome extension
+
+![screenshot pomodoro](009pomodoro/009pomodoro.png)
+
+#### What I used:
+
+-   Vanilla JavaScript
+-   setInterval
+-   clearInterval
+-   CSS to creat an animation
+
+#### What did I learn:
+
+-   How to use setInterval
+-   How to use clearInterval
+
+Started & Finished: 29/05/2020
+
+---
+
+# #Number [Name](link)
+
+#### Description:
+
+![Description](imagelink)
+
+#### What I used:
+
+-
+-
+
+#### What did I learn:
+
+-
+-
+
+Started & Finished: 28/05/2020
