@@ -245,6 +245,28 @@ Started & Finished: 29/05/2020
 
 ---
 
+# #10 [Navbar](https://danyweis.com/Project/smallProjects/010navbar.html)
+
+#### Description:
+
+Navbar with hover effect and active highlight
+
+![screenshot navbar](010navbar/010navbar.png)
+
+#### What I used:
+
+-   JavaScript mouseover
+-   CSS ::after
+
+#### What did I learn:
+
+-   To do animation on hover with the css ::after
+-   how to use e.target
+
+Started & Finished: 30/05/2020
+
+---
+
 # #Number [Name](link)
 
 #### Description:
@@ -253,12 +275,10 @@ Started & Finished: 29/05/2020
 
 #### What I used:
 
--
--
+## -
 
 #### What did I learn:
 
--
--
+## -
 
 Started & Finished: 28/05/2020
