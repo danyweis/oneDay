@@ -7,11 +7,11 @@
     height: 100vh;
     width: 100%;
     background: #00000020;
-    padding: relative;
+    position: relative;
     overflow: hidden;
 }
 
-.headerslider {
+.headerSlider {
     height: 100%;
     width: 500%;
     background: pink;
@@ -22,7 +22,7 @@
     width: 20%;
     background: green;
     float: left;
-    animation: slide 10s infinite;
+    animation: slide 5s infinite;
 }
 .img1 {
     background-image: url("006img1.jpg");
@@ -83,20 +83,20 @@
     }
 }
 
-.heroText  {
-  position:absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heroText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-h1{
-  font-size: 4rem;
-  background-color: #ffffff80;
-  padding: 2rem;
-  border-radius: 1rem;
-  /* color: red; */
+h1 {
+    font-size: 4rem;
+    background-color: #ffffff80;
+    padding: 2rem;
+    border-radius: 1rem;
+    /* color: red; */
 }

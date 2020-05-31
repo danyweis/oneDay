@@ -267,6 +267,24 @@ Started & Finished: 30/05/2020
 
 ---
 
+# #11 [Covid-19 API](https://danyweis.com/Project/smallProjects/011CovidAPI.html)
+
+#### Description:
+
+![ScreenShot Covid API ](011CovidAPI/011CovidAPI.png)
+
+#### What I used:
+
+## - fetch
+
+#### What did I learn:
+
+## - How to call an API
+
+Started & Finished: 31/05/2020
+
+---
+
 # #Number [Name](link)
 
 #### Description:
