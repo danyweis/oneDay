@@ -285,6 +285,24 @@ Started & Finished: 31/05/2020
 
 ---
 
+# #12 [Your favorite Lyrics](https://danyweis.com/Project/smallProjects/012song.html)
+
+#### Description:
+
+![Lyrics App](012song/012song.png)
+
+#### What I used:
+
+## - Vanilla JavaScript with fetch
+
+#### What did I learn:
+
+## - Implement error handling
+
+Started & Finished: 01/06/2020
+
+---
+
 # #Number [Name](link)
 
 #### Description:
