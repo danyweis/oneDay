@@ -1,0 +1,52 @@
+.switch
+    display: flex
+    justify-content: flex-end
+    width: 100%
+
+
+.choiceMinMax
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 120px
+    margin: 20px 50px
+
+.checkBox
+    width: 50px
+    height: 20px
+    background-color: map-get($colors, darkBGFont)
+    border-radius: 20px
+    box-shadow: $shadowInDBG
+    position: relative
+    
+
+#minMax
+    width: 50px
+    height: 20px
+    opacity: 0
+
+.checkSwitch
+    position: absolute
+    top: 1px
+    right: 1px
+    height: 18px
+    width: 18px
+    border-radius: 50%
+    background-color: map-get($colors, darkBGdark)
+    box-shadow: $shadowInSwitchDBG
+
+#minMax + .checkSwitch
+    transform: translateX(-1px)
+    transition: linear 150ms
+
+#minMax + .listOfCoinInsideGrid
+    font-size: 5em
+
+#minMax:checked + .checkSwitch
+    transform: translateX(-29px)
+    transition: linear 150ms
+
+h1
+    text-align: center
+    margin: 25px
+

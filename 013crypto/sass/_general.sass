@@ -1,0 +1,36 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Noto Sans TC', sans-serif
+
+a
+    text-decoration: none
+    color: map-get($colors, darkBGFont)
+    position: relative
+    @include underline(map-get($colors, darkBGFont))
+
+.container
+    margin: auto
+    min-height: 100vh
+    width: 1200px
+
+.darkBG
+    background-image: linear-gradient(45deg, map-get($colors,darkBGdark), map-get($colors, darkBGclear))
+
+.greenFont
+    color: map-get($colors, greenFont)
+
+.redFont
+    color: map-get($colors, redFont)
+
+.darkBGFont
+    color: map-get($colors, darkBGFont)
+
+.neutralFont
+    color: map-get($colors, neutralFont)
+
+.displayNone
+    display: none !important

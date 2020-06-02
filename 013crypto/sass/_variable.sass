@@ -1,0 +1,168 @@
+// IN THIS FILE WILL BE DECLAIRED VARIABLES, FUNCTIONS, MIXINS,...
+
+//  ==>     !!!!    DART SASS since 1.23.0  !!!!    <==
+//  ==>     !!!!    BEFORE USE FUNCTIONS    !!!!    <==
+
+//@use "sass:map"
+
+//      ==> COLOR <==    HAS TO BE CHANGED
+
+$colors: (darkBGdark: #001d3e, darkBGclear: #001d93, darkBGFont: #0085a9, greenFont: #00ff3b, redFont: #f4200b, neutralFont: #f5f5f5)
+
+// TO CALL COLOR WITHOUT FUNCTION
+// COLOR: map-get($colors, primary)
+
+@function color($color-name)
+    @return map-get($colors, $color-name)
+
+// TO CALL COLOR WITH FUNCTION
+// COLOR: color(primary)
+
+//  ****    ****    ****    ****    ****    ****    
+
+//      ==> FONT-FAMILY <==   !!!! HAS TO BE CHANGED
+
+
+$fontF: (fontHero: #{'Comfortaa', cursive}, fontH: #{'Lato', sans-serif}, fontP: #{'Nunito Sans', serif})
+
+@function font($font-name)
+    @return map-get($fontF, $font-name)
+
+   
+
+// TO CALL FONT WITH FUNCTION
+// FONT-FAMILY: font(cursive)
+
+//  ****    ****    ****    ****    ****    ****    
+
+//      ==> MEDIA <==
+
+//  ___ MOBILE FIRST ___    m > mobile, f > first , 4 > 480px
+
+// (default)	        Mobile-portrait
+// min-width: 480px	    Mobile-landscape (and larger)   ==> mf4
+// min-width: 768px	    Tablet-portrait (and larger)    ==> mf7
+// min-width: 992px	    Tablet-landscape (and larger)   ==> mf9
+// min-width: 1200px	Laptops (and langer)            ==> mf12
+
+//  ___ DESKTOP FIRST ___   d > desktop, f > first, 12 > 1200px
+
+// (default)            Laptops (and langer)
+// max-width: 1200px	Tablet-landscape (and smaller)  ==> df12
+// max-width: 992px	    Tablet-portrait (and smaller)   ==> df9
+// max-width: 768px	    Mobile-landscape (and smaller)  ==> df7
+// max-width: 480px	    Mobile-portrait (and smaller)   ==> df4
+
+// DECLARE VARIABLE & THE VALUE WANTED
+
+//  ___ MOBILE FIRST ___
+
+$mobileF: (mf4: 480px, mf7: 768px, mf9: 992px, mf12: 1200px)
+
+  
+//  **** ==> OLD VERSION THIS IS WITH FUNCTION CALLED IN A MIXIN
+
+// @function mobileFun($size)
+//     @return map-get($mobileF, $size)
+
+// @mixin mobile($size)
+//     @media (min-width: mobileFun($size))
+//         @content
+
+//  **** ==> END OF FUNCTION CALLED IN MIXIN 
+
+
+//  ==> MIXIN CALLS SASS:MAP FUNCTION IN MIXIN
+@mixin mobile($size)
+    @media (min-width: map-get($mobileF, $size))
+        @content
+
+
+// TO USE PUT IN THE ELEMENT WITCH WILL BE STYLED
+// @include mobile(mf4)
+
+
+//  ___ DESKTOP FIRST ___
+
+$desktopF: (df4: 480px, df7: 768px, df9: 992px, df12: 1200px)
+
+//  **** ==> OLD VERSION THIS IS WITH FUNCTION CALLED IN A MIXIN
+
+// @function desktopFun($size)
+//     @return map-get($desktopF, $size)
+
+// @mixin desktop($size)
+//     @media (max-width: desktopFun($size))
+//         @content
+
+//  **** ==> END OF FUNCTION CALLED IN MIXIN
+
+//  ==> MIXIN CALLS SASS:MAP FUNCTION IN MIXIN
+@mixin desktop($size)
+    @media (max-width: map-get($desktopF, $size))
+        @content
+
+
+// TO USE PUT IN THE ELEMENT WITCH WILL BE STYLED
+// @include desktop(df4)
+
+//  ****    ****    ****    ****    ****    ****    
+
+
+//  SINGLE MIXINS
+
+// MAKE BACKGROUND DECORATION
+@mixin dots($color, $spacingA, $spacingB)
+    background: linear-gradient(-45deg,transparent,transparent 2px,$color 2.2px),linear-gradient(45deg,color(primary),color(primary))
+    background-size: $spacingA $spacingB
+
+@mixin horizontalLine($color)
+    background: linear-gradient(0deg,transparent,transparent 2px,$color 2.2px),linear-gradient(45deg,color(primary),color(primary))
+    background-size: 10px 10px
+
+@mixin verticalLine($color)
+    background: linear-gradient(90deg,transparent,transparent 2px,$color 2.2px),linear-gradient(45deg,color(primary),color(primary))
+    background-size: 10px 10px   
+
+// MAKE BACKGROUND IMAGE BLUR
+@mixin heroBackground($url)
+    background-image: $darkenBG, url($url)
+    background-size: cover
+    background-position: left center
+
+// DO UNDERLINE ANIMATION FOR LINKS
+@mixin underline($this)
+    &::after
+        content: ''
+        position: absolute
+        height: 2px
+        width: 100%
+        background: ($this)
+        bottom: 0
+        left: 0
+        transform: scale(0)
+        transform-origin: right
+        transition: transform 250ms ease-in
+    
+    &:hover::after
+        transform-origin: left
+        transform: scale(1)
+
+//  SINGLE VARIABLES
+
+//  BOX-SHADOWS
+$shadowCBG: -3px -3px 3px rgba(255,255,255,0.9), 3px 3px 3px rgba(0,0,0,0.4)
+$shadowDBG: -1px -1px 2px rgba(255,255,255,0.4),1px 1px 2px rgba(0,0,0,0.9)
+
+$shadowInCBG: -2px -2px 3px rgba(255,255,255,0.9) inset, 2px 2px 3px rgba(0,0,0,0.4) inset
+$shadowInDBG: -2px -2px 3px rgba(255,255,255,0.4) inset,2px 2px 3px rgba(0,0,0,0.5) inset
+$shadowInSwitchDBG: -2px -2px 3px rgba(0,0,0,0.6) inset, 2px 2px 3px 0px rgba(255,255,255,0.6) inset
+
+
+$shadowFrontCBG: drop-shadow(-3px -3px 2px rgba(255,255,255,1))
+$shadowBackCBG: drop-shadow(3px 3px 2px rgba(0,0,0,0.4))
+
+$shadowFrontDBG: drop-shadow(-3px -3px 2px rgba(255,255,255,0.4))
+$shadowBackDBG: drop-shadow(3px 3px 2px rgba(0,0,0,0.9))
+
+$darkenBG: linear-gradient(to right,rgba(0,0,0,0.4) ,rgba(0,0,0,0.4))
