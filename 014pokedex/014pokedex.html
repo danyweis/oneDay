@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="014pokedex.css" />
+        <title>Pokedex</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ pageTitle }}</h1>
+            <div class="container" v-for="pokemon in pokeList">
+                <div class="block">
+                    <img :src="pokemon.sprites.front_default" alt="" />
+                    <div class="name">{{ pokemon.name }}</div>
+                </div>
+            </div>
+        </div>
+        <script src="014pokedex.js"></script>
+    </body>
+</html>
