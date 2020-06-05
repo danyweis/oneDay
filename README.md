@@ -303,6 +303,48 @@ Started & Finished: 01/06/2020
 
 ---
 
+# #13 [Crypto Tracker](https://danyweis.com/Project/smallProjects/013crypto.html)
+
+#### Description:
+
+This is a project which I will grow by time the more I learn
+
+![Crypto app](013crypto/013crypto.png)
+
+#### What I used:
+
+## - Two crypto API's which I mix to get the info I wanted
+
+#### What did I learn:
+
+## - How to mix two APIs
+
+Started & Finished: 02/06/2020
+
+---
+
+# #14 [Pokedex](https://danyweis.com/Project/smallProjects/014pokedex.html)
+
+#### Description:
+
+This is an easy Pokedex in which I started using Vue.js
+
+![Pokedex](014pokedex/014pokedex.png)
+
+#### What I used:
+
+## - Vue.js
+
+## - Two Pokemon API's
+
+#### What did I learn:
+
+## - Started to work with Vue.js
+
+Started & Finished: 05/06/2020
+
+---
+
 # #Number [Name](link)
 
 #### Description:

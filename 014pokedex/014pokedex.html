@@ -4,21 +4,46 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="014pokedex.ico" type="image/x-icon" />
+        <link rel="icon" href="014pokedex.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="014pokedex.css" />
         <title>Pokedex</title>
     </head>
     <body>
         <div class="container">
-            <h1>Pokedex</h1>
+            <div class="title">
+                <h1 class="title">Pokedex</h1>
+            </div>
             <div class="app">
-                <div class="pokemon" v-for="pokemon in pokemonInfo">
-                    <img class="pokeImg" :src="urlImages + pokemon.shortname + ext" alt="" />
-                    <!-- <img :src="pokemon.images.typeIcon" alt="" />
-                    <img :src="pokemon.images.weaknessIcon" alt="" /> -->
-                    <div class="pokemonName">{{ pokemon.name }}</div>
+                <div class="pokemon" v-for="(pokemon, index) in pokemonInfo" :key="pokemon.info.id">
+                    <div class="up">
+                        <div class="main">
+                            <div class="imgBox">
+                                <img class="pokeImg" :src="urlImages + pokemon.shortname + ext" alt="" />
+                            </div>
+                            <div class="info">
+                                <h3 class="pokemonName"><span class="index"> #{{ index + 1 }}.</span> {{ pokemon.name }}</h3>
+                                <div class="details">
+                                    <div class="hp">hp: {{ pokemon.hp }}</div>
+                                    <div class="types">
+                                        <h5>Type: {{ pokemon.info.type }} <img class="icons" :src="urlIcon + pokemon.images.typeIcon" alt="" /></h5>
+                                        <h5>Weakness: {{ pokemon.info.weakness }} <img class="icons" :src="urlIcon + pokemon.images.weaknessIcon" alt="" /></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="down">
+                        <div>{{ pokemon.info.description }}</div>
+                        <h4>Moves:</h4>
+                        <div class="attacks" v-for="(attack, index) in pokemon.moves">
+                            <p>{{ index + 1 }}. {{attack.name}} | type: {{ attack.type }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="app.js"></script>
+        <script src="014pokedex.js"></script>
     </body>
 </html>
