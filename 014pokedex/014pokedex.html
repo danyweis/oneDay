@@ -4,19 +4,21 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <link rel="stylesheet" href="014pokedex.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Pokedex</title>
     </head>
     <body>
-        <div id="app">
-            <h1>{{ pageTitle }}</h1>
-            <div class="container" v-for="pokemon in pokeList">
-                <div class="block">
-                    <img :src="pokemon.sprites.front_default" alt="" />
-                    <div class="name">{{ pokemon.name }}</div>
+        <div class="container">
+            <h1>Pokedex</h1>
+            <div class="app">
+                <div class="pokemon" v-for="pokemon in pokemonInfo">
+                    <img class="pokeImg" :src="urlImages + pokemon.shortname + ext" alt="" />
+                    <!-- <img :src="pokemon.images.typeIcon" alt="" />
+                    <img :src="pokemon.images.weaknessIcon" alt="" /> -->
+                    <div class="pokemonName">{{ pokemon.name }}</div>
                 </div>
             </div>
         </div>
-        <script src="014pokedex.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
