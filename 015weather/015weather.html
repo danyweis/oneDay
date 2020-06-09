@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="015weather.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div
+      id="app"
+      class="container-fluid"
+      :style=" { backgroundImage: tempImage}"
+    >
+      <div class="formBox row">
+        <div class="col-sm-12">
+          <div class="searchField">
+            <div class="magnifier">
+              <svg
+                class="bi bi-search"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                />
+              </svg>
+            </div>
+            <form class="searchInputField">
+              <input
+                type="text"
+                id="search"
+                name="city"
+                required
+                v-model="searchedCity"
+                placeholder="Luxembourg,LU"
+              />
+              <label class="labelForCity" for="city"> </label>
+            </form>
+            <div class="deleteText" @click="emptyBox">
+              <svg
+                class="bi bi-x"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- {{searchedCity}} -->
+          <div class="btn btn-block" @click="getWeather">Search</div>
+        </div>
+      </div>
+
+      <div class="bottom row">
+        <div class="col-sm-12 info" v-if="!weather == ''">
+          <h2 class="country">
+            {{ weather.name + ', ' + weather.sys.country }}
+          </h2>
+          <div class="tempSection">
+            <div class="tempMain">
+              <div class="temp">
+                {{ Math.round(weather.main.temp) + "&deg;"}}
+              </div>
+              <div class="description">
+                {{ weather.weather[0].description }}
+              </div>
+            </div>
+          </div>
+          <div class="icon">
+            <img class="icon" :src="image" alt="" />
+          </div>
+
+          <div class="">
+            <div class="wind">
+              <div class="title">
+                {{'Wind: ' + windDirection() + ' ' + weather.wind.speed + ' m/s'
+                }}
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="sun">
+              <!-- <div class="sunTitle"></div> -->
+              <div class="sunUp">
+                {{ 'Sunrise: ' + suntime(sunrise) }}
+              </div>
+              <div class="sunDown">
+                {{ 'Sunset: ' + suntime(sunset) }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else class="center-aligned">
+          <h1 class="col-sm-12">Weather App</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="015weather.js"></script>
+  </body>
+</html>
