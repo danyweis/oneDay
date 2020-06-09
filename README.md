@@ -5,13 +5,13 @@
 > In this repository I challenge myself to create one project a day until I land a job.  
 > #oneDay, **_Code_** everyday, **_learn_** everyday! This is a challenge to myself where I will try to create every day one small project (or if bigger over two or more days) until I land a position as a developer.
 >
-> -   The important part of this challenge is that I _code_ everyday and _learn_ everyday. The same time I will document my journey.
-> -   Every challenge needs to be documented with a **screenshot**, **description**, **what I used** to create the project, **what I learned** in the project and it needs to have a **start** and **finishing** date.
+> - The important part of this challenge is that I _code_ everyday and _learn_ everyday. The same time I will document my journey.
+> - Every challenge needs to be documented with a **screenshot**, **description**, **what I used** to create the project, **what I learned** in the project and it needs to have a **start** and **finishing** date.
 >
-> -   _Optional_: Every 10th day I will create a summary where I will describe how the last 10 days went, if there was something I struggled with, if there is something I see that I get more comfortable with, if there is something significant that I learned and how I feel about the last days.
-> -   If you are new to coding and you want to make sure that you code everyday and maybe get a job in the industry if that is something you would like then feel free to create your own oneDay repository and to share your projects with the community .
+> - _Optional_: Every 10th day I will create a summary where I will describe how the last 10 days went, if there was something I struggled with, if there is something I see that I get more comfortable with, if there is something significant that I learned and how I feel about the last days.
+> - If you are new to coding and you want to make sure that you code everyday and maybe get a job in the industry if that is something you would like then feel free to create your own oneDay repository and to share your projects with the community .
 >
-> -   If you do the challenge feel free to send me a link on Twitter to you project I would love to see what you created [@CodeWeis](https://twitter.com/CodeWeis) and put the #oneDayCodeEverydayLearnEveryday or come and join the [Facebook group](www.facebook.com/groups/onedaycode/)
+> - If you do the challenge feel free to send me a link on Twitter to you project I would love to see what you created [@CodeWeis](https://twitter.com/CodeWeis) and put the #oneDayCodeEverydayLearnEveryday or come and join the [Facebook group](www.facebook.com/groups/onedaycode/)
 >
 > ### But don’t forget the most important thing is HAVE FUN and learn everyday !!
 
@@ -31,14 +31,14 @@ In this project I recreated a basic Momentum clone.
 
 ##### What I used:
 
--   HTML
--   CSS
--   Vanilla JavaScript
+- HTML
+- CSS
+- Vanilla JavaScript
 
 ##### What did I learn:
 
--   I get more deep in to work with the Date Object
--   I learned how to use local storage
+- I get more deep in to work with the Date Object
+- I learned how to use local storage
 
 Started & Finished: 19/05/2020
 
@@ -54,12 +54,12 @@ This is a small project where the color of the background changes randomly on ev
 
 ##### What I used:
 
--   HTML
--   Vanilla JavaScript
+- HTML
+- Vanilla JavaScript
 
 ##### What did I learn:
 
--   How to make text on a website unselectable
+- How to make text on a website unselectable
 
 Started & Finished: 20/05/2020
 
@@ -75,9 +75,9 @@ This is a RGB to HEX and HEX to RGB converter
 
 ##### What I used:
 
--   HTML
--   CSS
--   Vanilla JavaScript
+- HTML
+- CSS
+- Vanilla JavaScript
 
 ##### What did I learn:
 
@@ -98,12 +98,12 @@ Just a simple coin flip for that I have time to focus on learning today
 
 ##### What I used:
 
--   Math.random()
--   Math.floor()
+- Math.random()
+- Math.floor()
 
 ##### What did I learn:
 
--   toggle attribute
+- toggle attribute
 
 Started & Finished: 22/05/2020
 
@@ -119,13 +119,13 @@ Input will be a birth date and it will tell you how long until your next Birthda
 
 ##### What I used:
 
--   JavaScript : date object
--   HTML : type date
+- JavaScript : date object
+- HTML : type date
 
 ##### What did I learn:
 
--   how to use type="date" value in JavaScript
--   how to find out if the browser is Safari and then to show type="number"
+- how to use type="date" value in JavaScript
+- how to find out if the browser is Safari and then to show type="number"
 
 Started & Finished: 23/05/2020
 
@@ -141,11 +141,11 @@ This is a hero slider build with no JavaScript only CSS
 
 ##### What I used:
 
--   CSS keyframes
+- CSS keyframes
 
 ##### What did I learn:
 
--   how to use CSS keyframes
+- how to use CSS keyframes
 
 Started & Finished: 24/05/2020
 
@@ -182,15 +182,15 @@ This is the game guess the color
 
 ##### What I used:
 
--   HTML
--   CSS grid
--   Vanilla JavaScript
+- HTML
+- CSS grid
+- Vanilla JavaScript
 
 ##### What did I learn:
 
--   how to handle user inputs on buttons
--   display elements depending on the inputs
--   the game works without page reload
+- how to handle user inputs on buttons
+- display elements depending on the inputs
+- the game works without page reload
 
 Started & Finished: 25/05/2020 -> 27/05/2020
 
@@ -208,14 +208,14 @@ This is a simple stop watch wit start stop and reset function
 
 #### What I used:
 
--   Vanilla JavaScript
--   setInterval
--   clearInterval
+- Vanilla JavaScript
+- setInterval
+- clearInterval
 
 #### What did I learn:
 
--   How to use setInterval
--   How to use clearInterval
+- How to use setInterval
+- How to use clearInterval
 
 Started & Finished: 28/05/2020
 
@@ -231,15 +231,15 @@ This is a small Pomodoro I created to be a google chrome extension
 
 #### What I used:
 
--   Vanilla JavaScript
--   setInterval
--   clearInterval
--   CSS to creat an animation
+- Vanilla JavaScript
+- setInterval
+- clearInterval
+- CSS to creat an animation
 
 #### What did I learn:
 
--   How to use setInterval
--   How to use clearInterval
+- How to use setInterval
+- How to use clearInterval
 
 Started & Finished: 29/05/2020
 
@@ -255,13 +255,13 @@ Navbar with hover effect and active highlight
 
 #### What I used:
 
--   JavaScript mouseover
--   CSS ::after
+- JavaScript mouseover
+- CSS ::after
 
 #### What did I learn:
 
--   To do animation on hover with the css ::after
--   how to use e.target
+- To do animation on hover with the css ::after
+- how to use e.target
 
 Started & Finished: 30/05/2020
 
@@ -342,6 +342,28 @@ This is an easy Pokedex in which I started using Vue.js
 ## - Started to work with Vue.js
 
 Started & Finished: 05/06/2020
+
+---
+
+# #15 [Weather App](https://danyweis.com/Project/smallProjects/015weather.html)
+
+#### Description:
+
+This is an weather app showing information's about the weather
+
+![Screenshot Weather App](015weather/015weather.png)
+
+#### What I used:
+
+## - Weather API
+
+## - Vue.js
+
+#### What did I learn:
+
+## - I try to use Vue.js more and more
+
+Started & Finished: 09/06/2020
 
 ---
 

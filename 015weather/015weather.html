@@ -48,7 +48,7 @@
                 />
               </svg>
             </div>
-            <form class="searchInputField">
+            <form class="searchInputField" @submit.prevent="getWeather">
               <input
                 type="text"
                 id="search"
@@ -56,6 +56,7 @@
                 required
                 v-model="searchedCity"
                 placeholder="Luxembourg,LU"
+                @keyup.Enter="getWeather"
               />
               <label class="labelForCity" for="city"> </label>
             </form>
