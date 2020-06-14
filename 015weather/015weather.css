@@ -8,6 +8,7 @@ body {
   justify-content: center;
 }
 #app {
+  margin-top: 50px;
   height: 800px;
   width: 400px;
   border: #77889950 1px solid;
@@ -125,7 +126,6 @@ body {
 }
 
 .sun {
-  margin: 10px 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -147,4 +147,31 @@ body {
   text-align: center;
   width: 100%;
   color: #fff;
+}
+@media (max-width: 450px) {
+  #app {
+    height: 100vh;
+    width: 100%;
+    border: none;
+    margin-top: 0px;
+  }
+  .temp {
+    font-size: 4em;
+    line-height: 100%;
+  }
+  .sun {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  .wind {
+    margin-top: 10x;
+    font-size: 1em;
+  }
+
+  .sunUp,
+  .sunDown {
+    margin: 0px 15px;
+    text-align: center;
+  }
 }

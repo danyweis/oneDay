@@ -1,0 +1,5 @@
+.DS_Strore
+node_modules
+dist/
+npm-debug.log
+hot

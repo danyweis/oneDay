@@ -5,7 +5,7 @@ var vm = new Vue({
     searchedCity: '',
     url: 'https://api.openweathermap.org/data/2.5/weather?q=',
     units: '&units=metric',
-    key: '&appid={api key}',
+    key: '&appid=87ed9a66fdb379ba08f553e8d288eb52',
     icon: 'https://openweathermap.org/img/wn/',
     iconId: '',
     iconExt: '@4x.png',
