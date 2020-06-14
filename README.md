@@ -367,6 +367,14 @@ Started & Finished: 09/06/2020
 
 ---
 
+# Update:
+
+Today we are the 14th June, I started this repo almost one month ago and wanted to do an update, I started to learn Vue JS so I don't push a project everyday because it takes a bit time to find the answers to all the questions which come over the time of a project. But I get mor confident with the syntax and all the small details. To soon come back to one project a day for the moment I did update the [Crypto project](https://github.com/danyweis/cryptoProject) which is not in the list now but it has his own repo because it will become a bigger project .
+
+Anyway I started my next project in Vue JS and it will be soon pushed.
+
+---
+
 # #Number [Name](link)
 
 #### Description:
