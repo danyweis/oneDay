@@ -1,39 +1,106 @@
 
 .navbar
+  transition: 350ms ease-in
   position: fixed
+  transform: translateY(calc(100% - 70px))
   bottom: 0
   letf: 0
   width: 100%
   background: color(backgroundCard)
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  @include mobile(mf9) 
+    border-radius: 3px
+    width: 250px
+    transform: translateY(0)
+    position: relative
+    height: calc(100vh - 50px)
+    box-shadow: 0px 4px 4px -4px #000000
+
+.navbarOpen
+  transform: translateY(0)
+  
+.navBox
+  width: 100%
+  @include mobile(mf9) 
+    height: 100%
 
 .boxLogo
   width: 100%
+  height: 70px
   display: flex
   justify-content: space-between
   align-items: center
   padding: 10px 20px
 
+
 .logo
   font-family: 'Parisienne', cursive
   font-size: 1.5em
 
-.navigationMenu
-  text-transform: uppercase
+.menuBlock
+  width: 100%
+  
 
 .burger
-  height: 40px
+  height: 30px
   width: 40px
-  background: pink
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  @include mobile(mf9) 
+    display: none 
+
+.block
+  display: block
+  background: #666
+  box-shadow: 0px 3px 3px -2px #000000
+  height: 6px
+  width: 40px
+
+
+.navigationMenu
+  width: 100%
+  text-transform: uppercase
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  li
+    margin: 10px
+    letter-spacing: 2px
+    a
+      text-decoration: none
+      position: relative
+      color: #333
+      &::before
+        content: ''
+        position: absolute
+        height: 2px
+        width: 100%
+        bottom: 0
+        left: 0
+        background-color: #666666
+        transform: scaleX(0)
+        transform-origin: left
+        transition: ease-in 250ms
+      &:hover::before
+        transform: scaleX(1)
+        transform-origin: right
+
 
 .socialMenu
   width: 50%
   display: flex
   justify-content: space-between
+  margin: auto
+  @include mobile(mf9) 
+    position: absolute
+    bottom: 0
+    width: 100%
+    justify-content: space-evenly
 
-// for after mobile vue
-@include mobile(mf9) 
-  @include mobile(mf9)
+.socialIcon
+  width: 20px
+  height: 20px
+  background-color: bisque
+  font-size: 20px
+  margin: 20px
