@@ -1,6 +1,6 @@
 <template>
   <div class="heroBox">
-    <div class="img"></div>
+    <div class>Info</div>
   </div>
 </template>
 

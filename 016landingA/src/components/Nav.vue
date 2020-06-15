@@ -14,19 +14,19 @@
       <div class="menuBlock">
         <ul class="navigationMenu">
           <li>
-            <a href>Home</a>
+            <a @click="pageSelected = 'heropage'">Home</a>
           </li>
           <li>
-            <a href>About</a>
+            <a @click="pageSelected = 'aboutpage'">About</a>
           </li>
           <li>
-            <a href>Info</a>
+            <a @click="pageSelected = 'infopage'">Info</a>
           </li>
           <li>
-            <a href>Projects</a>
+            <a @click="pageSelected = 'gridpage'">Projects</a>
           </li>
           <li>
-            <a href>Contact</a>
+            <a @click="pageSelected = 'contactpage'">Contact</a>
           </li>
         </ul>
         <ul class="socialMenu">
@@ -52,6 +52,7 @@
 export default {
   data: function() {
     return {
+      pageSelected: "",
       isActive: false,
       burgerActive: true,
       arrowActive: false
@@ -60,6 +61,11 @@ export default {
   methods: {
     openMenu: function() {
       this.isActive = !this.isActive;
+    }
+  },
+  watch: {
+    pageSelected: function() {
+      this.$emit("pageWasChanged", this.pageSelected);
     }
   }
 };

@@ -5,7 +5,8 @@
         <div
           class="text"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus neque .</div>
-        <button class="btn btnHero">Projects</button>
+        <!-- <button class="btn btnHero" @click="pageSelected = 'gridpage'">Projects</button> -->
+        <div class="btn btnHero">Link to Project</div>
       </div>
     </div>
   </div>
@@ -14,8 +15,16 @@
 <script>
 export default {
   data: function() {
-    return {};
+    return {
+      // pageSelected: ""
+    };
   }
+  // watch: {
+  //   pageSelected: function() {
+  //     console.log("Pushed");
+  //     this.$emit("pageWasChanged", this.pageSelected);
+  //   }
+  // }
 };
 </script>
 
