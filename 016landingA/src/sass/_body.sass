@@ -3,9 +3,18 @@
   min-height: 100vh
   background: color(background)
   font-family: 'Ubuntu', sans-serif
-  color: #666
+  color: color(font)
   @include mobile(mf9)
     padding: 25px
-
+    display: flex
+    height: calc(100vh - 50px)
 li
   list-style: none
+
+.btn
+  background: color(font)
+  color: color(background)
+  border: none
+  padding: 10px
+  font-size: 1em
+  border-radius: $borderR

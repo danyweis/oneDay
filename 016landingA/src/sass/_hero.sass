@@ -1,2 +1,47 @@
 
+.heroBox
+  height: calc(100vh - 70px)
+  padding: 1em
+  @include mobile(mf9) 
+    background: color(backgroundCard)
+    height: calc(100vh - 50px)
+    margin-left: 25px
+    width: 100%    
+    border-radius: $borderR
+    box-shadow: 0px 4px 4px -4px #000000
+
+
+.img
+  height: 100%
+  width: 100%
+  background-image: url(/images/016pic1.jpg)
+  background-position: bottom
+  background-size: cover
+  display: flex
+  justify-content: center
+  align-items: flex-end
+
+.card
+  border-radius: $borderR
+  height: 100px
+  width: 250px
+  background-color: color(background)
+  margin: 25px
+  padding: 10px
+  text-align: center
+  position: relative
   
+.btnHero
+  position: absolute
+  left: 50%
+  bottom: 0
+  transition: 150ms ease-in
+  transform: translate(-50%, 50%)
+  outline: 0
+  box-shadow: 0px 4px 4px -4px #000000
+  &:hover
+    transform: translate(-50%, 50%) scale(1.01)
+    box-shadow: 0px 5px 4px -4px #000000
+  &:active
+    transform: translate(-50%, 50%) scale(0.99)
+    box-shadow: 0px 3px 4px -4px #000000
