@@ -1,0 +1,61 @@
+.gridContent
+  overflow: auto
+  @include mobile(mf9)
+    border-bottom: 1em solid #ffffff
+  
+.gridContentBox
+  min-height: 100vh
+
+.gridBox
+  min-height: 400px
+  width: 100%
+  margin-bottom: 1em
+  @include mobile(mf7)
+    height: 350px
+    display: flex
+
+.gridImage
+  width: 100%
+  min-height: 400px 
+  background-position: bottom
+  background-size: cover
+  @include mobile(mf7)
+    width: 60%
+    height: 100%  
+  
+.gridImage1
+  background-image: url(/images/016pic3.jpg)
+
+.gridImage2
+  background-image: url(/images/016pic4.jpg)
+
+.gridImage3
+  background-image: url(/images/016pic5.jpg)
+
+.gridImage4
+  background-image: url(/images/016pic6.jpg)
+
+
+.gridText
+  min-height: 50% 
+  width: 100%
+  padding: 10px 0px
+  text-align: justify
+  @include mobile(mf7)
+    width: 40%
+    height: 100%  
+  h3
+    font-size: 1.7em
+
+.gridBoxTurn
+  display: flex
+  flex-direction: column-reverse
+  @include mobile(mf7)
+    flex-direction: row
+
+.gridTextR
+  @include mobile(mf7)
+    padding-left: 10px
+.gridTextL
+  @include mobile(mf7)
+    padding-right: 10px

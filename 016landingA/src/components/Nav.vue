@@ -14,19 +14,19 @@
       <div class="menuBlock">
         <ul class="navigationMenu">
           <li>
-            <a @click="pageSelected = 'heropage'">Home</a>
+            <a @click="openMenu(); pageSelected = 'heropage'">Home</a>
           </li>
           <li>
-            <a @click="pageSelected = 'aboutpage'">About</a>
+            <a @click="openMenu(); pageSelected = 'aboutpage'">About</a>
           </li>
           <li>
-            <a @click="pageSelected = 'infopage'">Info</a>
+            <a @click="openMenu(); pageSelected = 'infopage'">Info</a>
           </li>
           <li>
-            <a @click="pageSelected = 'gridpage'">Projects</a>
+            <a @click="openMenu(); pageSelected = 'gridpage'">Projects</a>
           </li>
           <li>
-            <a @click="pageSelected = 'contactpage'">Contact</a>
+            <a @click="openMenu(); pageSelected = 'contactpage'">Contact</a>
           </li>
         </ul>
         <ul class="socialMenu">
@@ -60,6 +60,10 @@ export default {
   },
   methods: {
     openMenu: function() {
+      this.isActive = !this.isActive;
+    },
+    closeMenu: function() {
+      console.log("Close");
       this.isActive = !this.isActive;
     }
   },
