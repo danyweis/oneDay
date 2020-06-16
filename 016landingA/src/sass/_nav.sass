@@ -51,6 +51,8 @@
   display: flex
   flex-direction: column
   justify-content: space-between
+  transition: 500ms
+  transform: rotate(360deg)
   @include mobile(mf9) 
     display: none 
 
@@ -60,6 +62,30 @@
   box-shadow: 0px 3px 3px -2px #000000
   height: 6px
   width: 40px
+  transition: 500ms
+
+
+.burgerClose
+  padding-left: 9px
+  transition-delay: 100ms
+  transition: 500ms
+  transform: rotate(180deg)
+  .block
+    // display: block
+    // background: color(font)
+    // box-shadow: 0px 3px 3px -2px #000000
+    height: 6px
+    width: 37px
+  .block1
+    transform-origin: top left
+    transform: rotateZ(45deg)
+  .block3
+    transform-origin: bottom left
+    transform: rotateZ(-45deg)
+  .block2
+    opacity: 0
+  @include mobile(mf9) 
+    display: none 
 
 
 .navigationMenu

@@ -275,11 +275,11 @@ Started & Finished: 30/05/2020
 
 #### What I used:
 
-## - fetch
+- fetch
 
 #### What did I learn:
 
-## - How to call an API
+- How to call an API
 
 Started & Finished: 31/05/2020
 
@@ -293,11 +293,11 @@ Started & Finished: 31/05/2020
 
 #### What I used:
 
-## - Vanilla JavaScript with fetch
+- Vanilla JavaScript with fetch
 
 #### What did I learn:
 
-## - Implement error handling
+- Implement error handling
 
 Started & Finished: 01/06/2020
 
@@ -313,11 +313,11 @@ This is a project which I will grow by time the more I learn
 
 #### What I used:
 
-## - Two crypto API's which I mix to get the info I wanted
+- Two crypto API's which I mix to get the info I wanted
 
 #### What did I learn:
 
-## - How to mix two APIs
+- How to mix two APIs
 
 Started & Finished: 02/06/2020
 
@@ -333,13 +333,13 @@ This is an easy Pokedex in which I started using Vue.js
 
 #### What I used:
 
-## - Vue.js
+- Vue.js
 
-## - Two Pokemon API's
+- Two Pokemon API's
 
 #### What did I learn:
 
-## - Started to work with Vue.js
+- Started to work with Vue.js
 
 Started & Finished: 05/06/2020
 
@@ -355,13 +355,13 @@ This is an weather app showing information's about the weather
 
 #### What I used:
 
-## - Weather API
+- Weather API
 
-## - Vue.js
+- Vue.js
 
 #### What did I learn:
 
-## - I try to use Vue.js more and more
+- I try to use Vue.js more and more
 
 Started & Finished: 09/06/2020
 
@@ -372,6 +372,30 @@ Started & Finished: 09/06/2020
 Today we are the 14th June, I started this repo almost one month ago and wanted to do an update, I started to learn Vue JS so I don't push a project everyday because it takes a bit time to find the answers to all the questions which come over the time of a project. But I get mor confident with the syntax and all the small details. To soon come back to one project a day for the moment I did update the [Crypto project](https://github.com/danyweis/cryptoProject) which is not in the list now but it has his own repo because it will become a bigger project .
 
 Anyway I started my next project in Vue JS and it will be soon pushed.
+
+---
+
+# #16 [Landing page ArchiModern](link)
+
+#### Description:
+
+This is a Modern Landing page build with VueJs
+
+![Screen shot](016landingA/016landingA.jpg)
+
+#### What I used:
+
+- Vue JS
+
+#### What did I learn:
+
+- How to switch from one component to an other without destroying the component
+
+- How to use Mixins
+
+- How to call two methods on one link
+
+Started & Finished: 14/06/2020
 
 ---
 

@@ -5,26 +5,20 @@
         <div
           class="text"
         >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus neque .</div>
-        <!-- <button class="btn btnHero" @click="pageSelected = 'gridpage'">Projects</button> -->
-        <div class="btn btnHero">Link to Project</div>
+        <div class="btn btnHero">Some Link</div>
+        <!-- <div class="btn btnHero" @click="pageSelected = 'gridpage'">See Projects</div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// import pageMixin from "./pageMixin.js";
 export default {
   data: function() {
-    return {
-      // pageSelected: ""
-    };
+    return {};
   }
-  // watch: {
-  //   pageSelected: function() {
-  //     console.log("Pushed");
-  //     this.$emit("pageWasChanged", this.pageSelected);
-  //   }
-  // }
+  // mixins: [pageMixin],
 };
 </script>
 

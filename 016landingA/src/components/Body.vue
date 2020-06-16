@@ -3,6 +3,7 @@
     <navbar @pageWasChanged="currentPage = $event"></navbar>
     <keep-alive>
       <component :is="currentPage"></component>
+      <!-- <component @pageWasChanged="currentPage = $event" :is="currentPage"></component> -->
     </keep-alive>
   </div>
 </template>
@@ -31,5 +32,3 @@ export default {
   }
 };
 </script>
-
-<style lang="sass"></style>

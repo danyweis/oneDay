@@ -5,7 +5,7 @@
         <div class="logo">
           <h2>ArchiModern</h2>
         </div>
-        <div class="burger" @click="openMenu">
+        <div class="burger" :class="{burgerClose: isActive}" @click="openMenu">
           <span class="block block1"></span>
           <span class="block block2"></span>
           <span class="block block3"></span>
@@ -57,28 +57,19 @@
 </template>
 
 <script>
+import pageMixin from "./pageMixin.js";
 export default {
   data: function() {
     return {
-      pageSelected: "",
-      isActive: false,
-      burgerActive: true,
-      arrowActive: false
+      // pageSelected: ""
+      isActive: false
     };
   },
   methods: {
     openMenu: function() {
       this.isActive = !this.isActive;
-    },
-    closeMenu: function() {
-      console.log("Close");
-      this.isActive = !this.isActive;
     }
   },
-  watch: {
-    pageSelected: function() {
-      this.$emit("pageWasChanged", this.pageSelected);
-    }
-  }
+  mixins: [pageMixin]
 };
 </script>
