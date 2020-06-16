@@ -31,16 +31,24 @@
         </ul>
         <ul class="socialMenu">
           <li class="socialIcon">
-            <a href="#">F</a>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
           </li>
           <li class="socialIcon">
-            <a href="#">I</a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
           </li>
           <li class="socialIcon">
-            <a href="#">T</a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
           </li>
           <li class="socialIcon">
-            <a href="#">Y</a>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
           </li>
         </ul>
       </div>
