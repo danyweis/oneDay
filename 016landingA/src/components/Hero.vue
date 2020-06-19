@@ -1,6 +1,6 @@
 <template>
   <div class="heroBox">
-    <div class="img">
+    <div class="img" :style="heroBG">
       <div class="card">
         <div
           class="text"
@@ -16,11 +16,12 @@
 // import pageMixin from "./pageMixin.js";
 export default {
   data: function() {
-    return {};
+    return {
+      heroBG: "background-image: url(images/016pic1.jpg)"
+    };
   }
   // mixins: [pageMixin],
 };
 </script>
 
-<style>
-</style>
+

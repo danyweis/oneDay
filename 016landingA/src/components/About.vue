@@ -4,7 +4,7 @@
       Who is
       <span class="aboutLogo">ArchiModern</span>
     </h2>
-    <div class="aboutImg"></div>
+    <div :style="bg" class="aboutImg"></div>
     <div class="aboutContent">
       <h2 class="aboutLogo">Title</h2>
       <div class="aboutText">
@@ -21,7 +21,9 @@
 <script>
 export default {
   data: function() {
-    return {};
+    return {
+      bg: "background-image: url(images/016pic2.jpg)"
+    };
   }
 };
 </script>

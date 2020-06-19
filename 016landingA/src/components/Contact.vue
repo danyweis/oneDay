@@ -1,7 +1,7 @@
 <template>
   <div class="heroBox contactBox">
     <div class="divider">
-      <div class="contactInfo">
+      <div class="contactInfo" :style="contactBG">
         <div class="contactImgLayer">
           <div class="address">
             <h2>Address</h2>
@@ -73,7 +73,9 @@
 <script>
 export default {
   data: function() {
-    return {};
+    return {
+      contactBG: "background-image: url(images/016pic1.jpg)"
+    };
   }
 };
 </script>
