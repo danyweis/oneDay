@@ -375,7 +375,7 @@ Anyway I started my next project in Vue JS and it will be soon pushed.
 
 ---
 
-# #16 [Landing page ArchiModern](link)
+# #16 [Landing page ArchiModern](https://danyweis.com/Project/smallProjects/016landingA/index.html)
 
 #### Description:
 
@@ -399,6 +399,22 @@ Started & Finished: 14/06/2020
 
 ---
 
+# #17 [Paper Rock Scissors](https://danyweis.com/Project/smallProjects/017PRS.html)
+
+#### Description:
+
+I created a small Paper Rock Scissors game
+
+![Screenshot Paper Rock Scissors App](017PRS/017PRS.jpg)
+
+#### What I used:
+
+- Vanilla JavaScript
+
+Started & Finished: 19/06/2020
+
+---
+
 # #Number [Name](link)
 
 #### Description:
@@ -407,10 +423,10 @@ Started & Finished: 14/06/2020
 
 #### What I used:
 
-## -
+-
 
 #### What did I learn:
 
-## -
+-
 
 Started & Finished: 28/05/2020
