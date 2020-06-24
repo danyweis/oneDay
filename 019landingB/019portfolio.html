@@ -3,125 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="019portfolio.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="page">
-      <div class="topBar">
-        <div class="logoBox">
-          <h1>Logo</h1>
-          <!-- <img src="" alt="Page Logo" class="logo"> -->
+    <div id="app">
+      <div class="page">
+        <div class="topBar">
+          <div class="logoBox">
+            <h1>Folio</h1>
+            <!-- <img src="" alt="Page Logo" class="logo"> -->
+          </div>
+
+          <nav class="navigation">
+            <div class="navWrapper">
+              <ul>
+                <li class="navLinks"><a class="link">Home</a></li>
+                <li class="navLinks"><a class="link">Portfolio</a></li>
+                <li class="navLinks"><a class="link">About</a></li>
+                <li class="navLinks"><a class="link">Blog</a></li>
+                <li class="navLinks"><a class="link">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
 
-        <nav class="navigation">
-          <div class="navWrapper">
-            <ul>
-              <li class="navLinks"><a class="link">Home</a></li>
-              <li class="navLinks"><a class="link">Portfolio</a></li>
-              <li class="navLinks"><a class="link">About</a></li>
-              <li class="navLinks"><a class="link">Blog</a></li>
-              <li class="navLinks"><a class="link">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <div class="leftBlock">
-        <nav class="socialNavigation">
-          <div class="socialNavigationWrapper">
-            <ul>
-              <li class="socialNavLinks">
-                <a href="#" class="socialLink">F</a>
-              </li>
-              <li class="socialNavLinks">
-                <a href="#" class="socialLink">T</a>
-              </li>
-              <li class="socialNavLinks">
-                <a href="#" class="socialLink">I</a>
-              </li>
-              <li class="socialNavLinks">
-                <a href="#" class="socialLink">P</a>
-              </li>
-              <li class="socialNavLinks">
-                <a href="#" class="socialLink">L</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      <div class="rightBlock">
-        <h2>Your Name and Last</h2>
-      </div>
-
-      <div class="contentBlock">
-        <div class="hero">
-          <h5>Branding Name</h5>
-          <h1>Portfolio Name</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere non
-            voluptas deleniti sunt harum repudiandae, quasi, repellat id
-            facilis!
-          </p>
-          <button class="cta">Call to Action</button>
+        <div class="rightBlock">
+          <nav class="socialNavigation">
+            <div class="socialNavigationWrapper">
+              <ul>
+                <li class="socialNavLinks">
+                  <a href="#" class="socialLink">F</a>
+                </li>
+                <li class="socialNavLinks">
+                  <a href="#" class="socialLink">T</a>
+                </li>
+                <li class="socialNavLinks">
+                  <a href="#" class="socialLink">I</a>
+                </li>
+                <li class="socialNavLinks">
+                  <a href="#" class="socialLink">P</a>
+                </li>
+                <li class="socialNavLinks">
+                  <a href="#" class="socialLink">L</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-        <!-- END HERO -->
 
-        <div class="portfolio">
-          <h3>
-            My Work
-          </h3>
-          <h4>Made with Passion</h4>
-          <div class="cardBox">
-            <div class="card">
+        <div class="leftBlock">
+          <h2>Your Name and Last</h2>
+        </div>
+
+        <div class="contentBlock">
+          <div class="hero">
+            <h5>Branding Name</h5>
+            <h1>Portfolio Name</h1>
+            <p>
+              <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+              voluptates magnam corrupti quos quibusdam mollitia minima nam
+              similique accusantium aliquid, debitis, eum placeat labore
+              recusandae! Est necessitatibus nesciunt mollitia repellat! -->
+            </p>
+            <button class="btn cta">Call to Action</button>
+          </div>
+          <!-- END HERO -->
+
+          <div class="portfolio">
+            <h3>
+              My Work
+            </h3>
+            <h4>Made with Passion</h4>
+            <div class="cardBox">
+              <div class="card">
+                <img src="" alt="" />
+                <h3 class="projectName">ProjectName</h3>
+                <div class="linkBox">
+                  <a href="#">Project</a><a href="#">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="leftText">
+              <p>Portfolio</p>
+            </div>
+          </div>
+          <!-- END PORTFOLIO -->
+
+          <div class="about">
+            <div class="aboutContentBlock">
               <img src="" alt="" />
-              <h3 class="projectName">ProjectName</h3>
-              <div class="linkBox">
-                <a href="#">Project</a><a href="#">Code</a>
+              <div class="aboutTextBox">
+                <h3>About me</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolor pariatur dolore eligendi debitis, quod repellendus cum,
+                  accusamus quas porro voluptas quam cumque facilis ab, aliquam
+                  eius quia! Cum, molestiae rerum. Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Facere illum commodi nam alias
+                  doloribus deserunt, soluta error illo at reiciendis debitis
+                  est ea suscipit. Alias distinctio itaque enim voluptatibus
+                  nisi!
+                </p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolor pariatur dolore eligendi debitis, quod repellendus cum,
+                  accusamus quas porro voluptas quam cumque facilis ab, aliquam
+                  eius quia! Cum, molestiae rerum. Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Facere illum commodi nam alias
+                  doloribus deserunt, soluta error illo at reiciendis debitis
+                  est ea suscipit. Alias distinctio itaque enim voluptatibus
+                  nisi!
+                </p>
+              </div>
+            </div>
+
+            <div class="leftText">
+              <p>Portfolio</p>
+            </div>
+          </div>
+          <!-- END ABOUT -->
+
+          <div class="blog">
+            <div class="blogCard">
+              <div class="blogPic">
+                <img src="" alt="Blog post img" />
+              </div>
+              <div class="blogText">
+                <a href="#" class="blogPostLink">Link to post</a>
+                <h2>Blog post heading</h2>
+                <p>lorem</p>
+                <p><span>Name</span><span>Date</span></p>
+                <button class="btn cta">Read more</button>
               </div>
             </div>
           </div>
+          <!-- END BLOG -->
 
-          <div class="leftText">
-            <p>Portfolio</p>
-          </div>
-        </div>
-        <!-- END PORTFOLIO -->
-
-        <div class="about">
-          <div class="aboutContentBlock">
-            <img src="" alt="" />
-            <div class="aboutTextBox">
-              <h3>About me</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                pariatur dolore eligendi debitis, quod repellendus cum,
-                accusamus quas porro voluptas quam cumque facilis ab, aliquam
-                eius quia! Cum, molestiae rerum. Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Facere illum commodi nam alias
-                doloribus deserunt, soluta error illo at reiciendis debitis est
-                ea suscipit. Alias distinctio itaque enim voluptatibus nisi!
-              </p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                pariatur dolore eligendi debitis, quod repellendus cum,
-                accusamus quas porro voluptas quam cumque facilis ab, aliquam
-                eius quia! Cum, molestiae rerum. Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Facere illum commodi nam alias
-                doloribus deserunt, soluta error illo at reiciendis debitis est
-                ea suscipit. Alias distinctio itaque enim voluptatibus nisi!
-              </p>
+          <div class="contact">
+            <div class="form">
+              form
+            </div>
+            <div class="contactInfo">
+              <h2>Contact Me</h2>
+              <a href="">email@me.com</a>
             </div>
           </div>
-
-          <div class="leftText">
-            <p>Portfolio</p>
-          </div>
         </div>
-        <!-- END ABOUT -->
-
-        <div class="blog"></div>
       </div>
     </div>
+    <!-- <script src="vue.js"></script> -->
+    <script src="019portfolioJSON.js"></script>
+    <script src="019portfolio.js"></script>
   </body>
 </html>
