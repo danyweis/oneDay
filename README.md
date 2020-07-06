@@ -5,6 +5,8 @@
 > In this repository I challenge myself to create one project a day until I land a job.  
 > #oneDay, **_Code_** everyday, **_learn_** everyday! This is a challenge to myself where I will try to create every day one small project (or if bigger over two or more days) until I land a position as a developer.
 >
+> (For the moment I focus on learning Vue.js and I'm not creating projects but they will come back)
+>
 > -   The important part of this challenge is that I _code_ everyday and _learn_ everyday. The same time I will document my journey.
 > -   Every challenge needs to be documented with a **screenshot**, **description**, **what I used** to create the project, **what I learned** in the project and it needs to have a **start** and **finishing** date.
 >
